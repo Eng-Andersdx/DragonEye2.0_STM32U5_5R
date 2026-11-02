@@ -2,61 +2,393 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "Splash",
         "Components": [
           {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
+            "Type": "Image",
+            "Name": "bg_5in",
             "Width": 800,
             "Height": 480,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 800,
-                "Height": 480,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
+            "RelativeFilename": "W5\\bg_dark.png"
           },
           {
-            "Type": "Box",
-            "Name": "background",
-            "Width": 800,
-            "Height": 480,
-            "Color": {
-              "Red": 10,
-              "Green": 14,
-              "Blue": 22
-            }
+            "Type": "Image",
+            "Name": "image1",
+            "X": 180,
+            "Y": 40,
+            "Width": 440,
+            "Height": 400,
+            "RelativeFilename": "W5\\logo_splash.png"
           },
           {
             "Type": "TextArea",
-            "Name": "title",
-            "Y": 186,
-            "Width": 800,
-            "Height": 49,
-            "TextId": "title",
+            "Name": "textArea1",
+            "X": 380,
+            "Y": 419,
+            "Width": 41,
+            "Height": 23,
+            "TextId": "__SingleUse_BPL1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "splash_skip",
+            "X": 280,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Alpha": 0,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "splash_skip",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "splash_skip"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Default"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Default",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "bg",
+            "X": -1,
+            "Width": 802,
+            "Height": 481,
+            "Pressed": "Default\\weather_background_sunny.png",
+            "Released": "Default\\weather_background_sunny.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "cloud",
+            "X": 72,
+            "Y": 45,
+            "Width": 307,
+            "Height": 72,
+            "RelativeFilename": "Default\\cloud5_2.png",
+            "Alpha": 198,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "cloud_2",
+            "X": -109,
+            "Y": 60,
+            "Width": 307,
+            "Height": 72,
+            "RelativeFilename": "Default\\cloud5_2.png",
+            "Alpha": 53,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "sun",
+            "X": 45,
+            "Y": 231,
+            "Width": 68,
+            "Height": 68,
+            "RelativeFilename": "Main\\sun_large.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "swipe_up",
+            "X": 358,
+            "Y": 449,
+            "Width": 84,
+            "Height": 23,
+            "TextId": "__SingleUse_T9MF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chevron_up",
+            "X": 388,
+            "Y": 432,
+            "Width": 25,
+            "Height": 13,
+            "RelativeFilename": "Default\\up_chevron.png",
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 45,
+            "Y": 60,
+            "Width": 227,
+            "Height": 115,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_4W7S",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Date",
+            "X": 49,
+            "Y": 158,
+            "Width": 223,
+            "Height": 34,
+            "TextId": "__SingleUse_YWNP",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "inside_outside_temp",
+            "X": 45,
+            "Y": 306,
+            "Width": 222,
+            "Height": 23,
+            "TextId": "__SingleUse_A985",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "temp",
+            "X": 130,
+            "Y": 236,
+            "Width": 84,
+            "Height": 60,
+            "TextId": "__SingleUse_I3NC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 763,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 748,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "fc_glass",
+            "X": 505,
+            "Y": 52,
+            "Width": 270,
+            "Height": 226,
+            "RelativeFilename": "W5\\glass_forecast.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc_title",
+            "X": 523,
+            "Y": 66,
+            "Width": 87,
+            "Height": 19,
+            "TextId": "w5_fc_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "home_glass",
+            "X": 505,
+            "Y": 292,
+            "Width": 270,
+            "Height": 128,
+            "RelativeFilename": "W5\\glass_home.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_title",
+            "X": 523,
+            "Y": 306,
+            "Width": 61,
+            "Height": 19,
+            "TextId": "w5_home_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_lights_v",
+            "X": 523,
+            "Y": 330,
+            "Width": 20,
+            "Height": 35,
+            "TextId": "w5_home_lights_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_lights_l",
+            "X": 523,
+            "Y": 372,
+            "Width": 53,
+            "Height": 15,
+            "TextId": "w5_home_lights_l",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_temp_v",
+            "X": 612,
+            "Y": 330,
+            "Width": 43,
+            "Height": 35,
+            "TextId": "w5_home_temp_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_temp_l",
+            "X": 612,
+            "Y": 372,
+            "Width": 35,
+            "Height": 15,
+            "TextId": "w5_home_temp_l",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "home_lock",
+            "X": 712,
+            "Y": 330,
+            "Width": 34,
+            "Height": 47,
+            "RelativeFilename": "Main\\locked_small.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "home_lock_l",
+            "X": 701,
+            "Y": 386,
+            "Width": 43,
+            "Height": 15,
+            "TextId": "w5_home_lock_l",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc0_day",
+            "X": 523,
+            "Y": 104,
+            "Width": 42,
+            "Height": 24,
+            "TextId": "w5_fc0_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "fc0_icon",
+            "X": 600,
+            "Y": 97,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_sun_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc0_temp",
+            "X": 657,
+            "Y": 104,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_fc0_temp",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -66,140 +398,5795 @@
           },
           {
             "Type": "TextArea",
-            "Name": "subtitle",
-            "Y": 250,
+            "Name": "fc1_day",
+            "X": 523,
+            "Y": 158,
+            "Width": 37,
+            "Height": 24,
+            "TextId": "w5_fc1_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "fc1_icon",
+            "X": 600,
+            "Y": 151,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc1_temp",
+            "X": 657,
+            "Y": 158,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_fc1_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc2_day",
+            "X": 523,
+            "Y": 212,
+            "Width": 25,
+            "Height": 24,
+            "TextId": "w5_fc2_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "fc2_icon",
+            "X": 600,
+            "Y": 205,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_rain_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "fc2_temp",
+            "X": 657,
+            "Y": 212,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_fc2_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "change_screen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bg"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Main",
+        "CanvasBufferSize": 12000,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "bg_5in",
             "Width": 800,
-            "Height": 25,
-            "TextId": "subtitle",
+            "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "myhome",
+            "X": 366,
+            "Y": 7,
+            "Width": 68,
+            "Height": 18,
+            "TextId": "__SingleUse_SO5M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_CPPF",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "Button",
+            "Name": "Climate",
+            "X": 15,
+            "Y": 43,
+            "Width": 222,
+            "Height": 167,
+            "Pressed": "Main\\Climate.png",
+            "Released": "Main\\Climate.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "wakeup",
+            "X": 13,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\wakeup_on_2.png",
+            "Released": "Main\\wakeup_off_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "blinds",
+            "X": 164,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\Blinds_on.png",
+            "Released": "Main\\blinds_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedtime",
+            "X": 316,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "Main\\Bedtime_on_2.png",
+            "Released": "Main\\Bedtime_off_2.png"
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_progress",
+            "X": 63,
+            "Y": 82,
+            "Width": 126,
+            "Height": 89,
+            "Visible": false,
+            "FileNameProgress": "Main\\climate_wheel_small_1.png",
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "CenterX": 75.5,
+            "CenterY": 83.0,
+            "Radius": 60.5,
+            "LineWidth": 100.0,
+            "StartAngle": 270.0,
+            "EndAngle": 450.0,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Main\\climate_wheel_bg_small.png",
+            "ProgressRangeMax": 50,
+            "ProgressInitialValue": 38
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h3",
+            "X": 66,
+            "Y": 177,
+            "Width": 120,
+            "Height": 18,
+            "TextId": "__SingleUse_9T3V",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 155,
+              "Green": 206,
+              "Blue": 249
+            },
+            "Wildcard1": {
+              "TextId": "climate_status",
+              "UseBuffer": true,
+              "BufferSize": 20
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Lights",
+            "X": 244,
+            "Y": 43,
+            "Width": 223,
+            "Height": 167,
+            "Pressed": "Main\\lights.png",
+            "Released": "Main\\lights.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "light_bulb_main",
+            "X": 336,
+            "Y": 88,
+            "Width": 38,
+            "Height": 61,
+            "RelativeFilename": "Main\\light_on_big.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "lights_count",
+            "X": 304,
+            "Y": 138,
+            "Width": 35,
+            "Height": 60,
+            "TextId": "__SingleUse_OQP1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "lights_",
+              "UseBuffer": true,
+              "BufferSize": 7
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "on",
+            "X": 374,
+            "Y": 161,
+            "Width": 38,
+            "Height": 34,
+            "TextId": "__SingleUse_1NXF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Security",
+            "X": 244,
+            "Y": 217,
+            "Width": 222,
+            "Height": 167,
+            "Pressed": "Main\\security.png",
+            "Released": "Main\\security.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "padlock_main",
+            "X": 338,
+            "Y": 263,
+            "Width": 34,
+            "Height": 47,
+            "RelativeFilename": "Main\\locked_small.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door_text",
+            "X": 302,
+            "Y": 319,
+            "Width": 106,
+            "Height": 26,
+            "TextId": "__SingleUse_CMKS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "security_status",
+            "X": 317,
+            "Y": 348,
+            "Width": 77,
+            "Height": 18,
+            "TextId": "__SingleUse_7FTV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "security_status",
+              "UseBuffer": true,
+              "BufferSize": 12
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "Music",
+            "X": 14,
+            "Y": 217,
+            "Width": 223,
+            "Height": 167,
+            "Pressed": "Main\\Music.png",
+            "Released": "Main\\Music.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "album_cover_small",
+            "X": 32,
+            "Y": 268,
+            "Width": 61,
+            "Height": 61,
+            "RelativeFilename": "Main\\Album_1.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_track_main",
+            "X": 107,
+            "Y": 277,
+            "Width": 113,
+            "Height": 18,
+            "TextId": "__SingleUse_9SBH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "music_track"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_artist_main",
+            "X": 107,
+            "Y": 300,
+            "Width": 87,
+            "Height": 15,
+            "TextId": "__SingleUse_AW3P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "music_artist"
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "back_main",
+            "X": 46,
+            "Y": 337,
+            "Width": 41,
+            "Height": 41,
+            "Pressed": "Main\\back_small.png",
+            "Released": "Main\\back_small.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "skip_main",
+            "X": 161,
+            "Y": 337,
+            "Width": 41,
+            "Height": 41,
+            "Pressed": "Main\\skip_small.png",
+            "Released": "Main\\skip_small.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "play_pause_main",
+            "X": 105,
+            "Y": 337,
+            "Width": 41,
+            "Height": 41,
+            "Pressed": "Main\\pause_small.png",
+            "Released": "Main\\play_small.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel_2",
+            "X": 63,
+            "Y": 82,
+            "Width": 126,
+            "Height": 89,
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "CenterX": 63.1,
+            "CenterY": 62.6,
+            "Radius": 59.7,
+            "LineWidth": 5.8,
+            "StartAngle": 248.0,
+            "EndAngle": 472.5,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Main\\climate_wheel_bg_small.png",
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 100
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_temp",
+            "X": 77,
+            "Y": 111,
+            "Width": 100,
+            "Height": 60,
+            "TextId": "__SingleUse_KRRR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "climate_temp",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "climate_dot_main",
+            "X": 175,
+            "Y": 161,
+            "Width": 12,
+            "Height": 12,
+            "RelativeFilename": "Main\\climate_circle_small.png"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "music_ani_main",
+            "X": 186,
+            "Y": 224,
+            "Width": 40,
+            "Height": 40,
+            "FileNameFirst": "music_ani_large\\music_ani_large_00000.png",
+            "FileNameLast": "music_ani_large\\music_ani_large_00029.png",
+            "UpdateTicksInterval": 60,
+            "StartOnLoad": true,
+            "LoopEnabled": true,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "music_off_main",
+            "X": 188,
+            "Y": 225,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "Music\\music_off_3.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_1",
+            "X": 351,
+            "Y": 415,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_2",
+            "X": 345,
+            "Y": 409,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 0.6,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_beams",
+            "X": 28,
+            "Y": 408,
+            "Width": 32,
+            "Height": 32,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_beams.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 16.0,
+            "YOrigo": 16.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_body",
+            "X": 36,
+            "Y": 416,
+            "Width": 16,
+            "Height": 16,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_body.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 8.0,
+            "YOrigo": 8.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "energy_tile",
+            "X": 482,
+            "Y": 43,
+            "Width": 304,
+            "Height": 167,
+            "Pressed": "W5\\tile_energy_pressed.png",
+            "Released": "W5\\tile_energy.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "energy_value",
+            "X": 499,
+            "Y": 72,
+            "Width": 100,
+            "Height": 62,
+            "TextId": "w5_energy_value",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "energy_unit",
+            "X": 501,
+            "Y": 136,
+            "Width": 78,
+            "Height": 19,
+            "TextId": "w5_energy_unit",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "energy_delta",
+            "X": 501,
+            "Y": 160,
+            "Width": 132,
+            "Height": 15,
+            "TextId": "w5_energy_delta",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 225,
+              "Blue": 170
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "energy_chart",
+            "X": 652,
+            "Y": 72,
+            "Width": 118,
+            "Height": 92,
+            "RelativeFilename": "W5\\energy_bars.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "weather_tile",
+            "X": 482,
+            "Y": 217,
+            "Width": 304,
+            "Height": 167,
+            "Pressed": "W5\\tile_weather_pressed.png",
+            "Released": "W5\\tile_weather.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "weather_icon",
+            "X": 497,
+            "Y": 252,
+            "Width": 56,
+            "Height": 56,
+            "RelativeFilename": "W5\\wx_sun_56.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "weather_temp",
+            "X": 562,
+            "Y": 244,
+            "Width": 86,
+            "Height": 62,
+            "TextId": "w5_weather_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "weather_hilo",
+            "X": 662,
+            "Y": 262,
+            "Width": 108,
+            "Height": 19,
+            "TextId": "w5_weather_hilo",
             "TextRotation": "0",
             "Color": {
               "Red": 150,
               "Green": 156,
               "Blue": 164
             }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "weather_cond",
+            "X": 499,
+            "Y": 318,
+            "Width": 59,
+            "Height": 24,
+            "TextId": "w5_weather_cond",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "weather_more",
+            "X": 499,
+            "Y": 348,
+            "Width": 162,
+            "Height": 15,
+            "TextId": "w5_weather_more",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "away",
+            "X": 482,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "W5\\away_on.png",
+            "Released": "W5\\away_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "movie",
+            "X": 635,
+            "Y": 388,
+            "Width": 151,
+            "Height": 72,
+            "Pressed": "W5\\movie_on.png",
+            "Released": "W5\\movie_off.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "settings_btn",
+            "X": 648,
+            "Width": 40,
+            "Height": 40,
+            "Pressed": "W5\\gear_pressed.png",
+            "Released": "W5\\gear.png"
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "climate",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "flexButton1"
+              "TriggerComponent": "Climate"
             },
             "Action": {
               "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Climate"
+            }
+          },
+          {
+            "InteractionName": "lights",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Lights"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Lights"
+            }
+          },
+          {
+            "InteractionName": "music",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Music"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Music"
+            }
+          },
+          {
+            "InteractionName": "security",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Security"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Security"
+            }
+          },
+          {
+            "InteractionName": "back_1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Default"
+            }
+          },
+          {
+            "InteractionName": "onSkipMainClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "skip_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onSkipMainClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackMainClicked"
+            }
+          },
+          {
+            "InteractionName": "onPlayPauseMainClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play_pause_main"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlayPauseMainClicked"
+            }
+          },
+          {
+            "InteractionName": "onBedtimeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bedtime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBedtimeClicked"
+            }
+          },
+          {
+            "InteractionName": "onWakeupClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "wakeup"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onWakeupClicked"
+            }
+          },
+          {
+            "InteractionName": "goSettings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settings_btn"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Settings"
+            }
+          },
+          {
+            "InteractionName": "goEnergy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "energy_tile"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Energy"
+            }
+          },
+          {
+            "InteractionName": "goWeather",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "weather_tile"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "Weather"
             }
           }
         ]
       },
       {
-        "Name": "Screen2",
+        "Name": "Climate",
         "CanvasBufferSize": 12000,
         "Components": [
           {
-            "Type": "FlexButton",
-            "Name": "flexButton1",
+            "Type": "Image",
+            "Name": "bg_5in",
             "Width": 800,
             "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 800,
-                "Height": 480,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "ColorPressed": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
               }
             ]
           },
           {
-            "Type": "Box",
-            "Name": "box1",
-            "X": 81,
-            "Y": 215,
-            "Width": 50,
-            "Height": 50,
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_UCER",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Climate_text",
+            "X": 373,
+            "Y": 7,
+            "Width": 54,
+            "Height": 18,
+            "TextId": "__SingleUse_RUJO",
+            "TextRotation": "0",
             "Color": {
-              "Red": 69,
-              "Green": 116,
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel",
+            "X": 116,
+            "Y": 66,
+            "Width": 250,
+            "Height": 177,
+            "Visible": false,
+            "FileNameProgress": "Climate\\climate_wheel_bg.png",
+            "Color": {
+              "Green": 240,
+              "Blue": 255
+            },
+            "CenterX": 100.0,
+            "CenterY": 80.0,
+            "Radius": 100.0,
+            "LineWidth": 500.0,
+            "StartAngle": 250.0,
+            "EndAngle": 472.5,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Climate\\climate_wheel_bg.png",
+            "ProgressRangeMax": 50,
+            "ProgressInitialValue": 25,
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_temp",
+            "X": 155,
+            "Y": 122,
+            "Width": 173,
+            "Height": 121,
+            "TextId": "__SingleUse_08D4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "main_temp",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "auto_mode",
+            "X": 30,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\auto_button_white_2.png",
+            "Released": "Climate\\auto_button_black_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "fan_toggle",
+            "X": 169,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\fan_button_white_2.png",
+            "Released": "Climate\\fan_button_black_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "eco",
+            "X": 308,
+            "Y": 334,
+            "Width": 143,
+            "Height": 111,
+            "Pressed": "Climate\\eco_on.png",
+            "Released": "Climate\\eco_off.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "minus_climate",
+            "X": 64,
+            "Y": 260,
+            "Width": 54,
+            "Height": 54,
+            "Pressed": "Climate\\minus_climate_on.png",
+            "Released": "Climate\\minus_climate_off.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "plus_climate",
+            "X": 365,
+            "Y": 260,
+            "Width": 54,
+            "Height": 54,
+            "Pressed": "Climate\\plus_climate_on.png",
+            "Released": "Climate\\plus_climate_off.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h1_text",
+            "X": 136,
+            "Y": 252,
+            "Width": 210,
+            "Height": 34,
+            "TextId": "__SingleUse_1UQX",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "Wildcard1": {
+              "TextId": "cooling"
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "climate_h2_text",
+            "X": 186,
+            "Y": 298,
+            "Width": 108,
+            "Height": 23,
+            "TextId": "__SingleUse_9HP6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 161,
+              "Green": 161,
+              "Blue": 161
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "CircleProgress",
+            "Name": "climate_wheel_1",
+            "X": 116,
+            "Y": 66,
+            "Width": 250,
+            "Height": 177,
+            "Color": {
+              "Red": 74,
+              "Green": 150,
+              "Blue": 236
+            },
+            "CenterX": 125.0,
+            "CenterY": 125.8,
+            "Radius": 119.5,
+            "LineWidth": 11.0,
+            "StartAngle": 248.0,
+            "EndAngle": 472.1,
+            "CapPrecision": "Round",
+            "FileNameBackground": "Climate\\climate_wheel_bg.png",
+            "ProgressRangeMax": 100,
+            "ProgressInitialValue": 100,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "climate_dot",
+            "X": 340,
+            "Y": 219,
+            "Width": 24,
+            "Height": 24,
+            "RelativeFilename": "Climate\\circle_indicator.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "auto_circle",
+            "X": 85,
+            "Y": 355,
+            "Width": 35,
+            "Height": 35,
+            "RenderingAlgorithm": "Bilinear Interpolation",
+            "FileNameImage": "Climate\\auto_white.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "XOrigo": 16.8,
+            "YOrigo": 16.8,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Moveable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "fan_1",
+            "X": 222,
+            "Y": 356,
+            "Width": 36,
+            "Height": 35,
+            "RenderingAlgorithm": "Bilinear Interpolation",
+            "FileNameImage": "Climate\\fan_white.png",
+            "LockBitmapToCenter": true,
+            "XAngle": 0.1,
+            "Scale": 1.0,
+            "XOrigo": 17.75,
+            "YOrigo": 17.4,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "air_panel",
+            "X": 482,
+            "Y": 50,
+            "Width": 304,
+            "Height": 395,
+            "RelativeFilename": "W5\\panel_climate.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "air_title",
+            "X": 500,
+            "Y": 64,
+            "Width": 70,
+            "Height": 19,
+            "TextId": "w5_air_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "hum_chip",
+            "X": 500,
+            "Y": 90,
+            "Width": 131,
+            "Height": 70,
+            "RelativeFilename": "W5\\chip_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hum_label",
+            "X": 514,
+            "Y": 100,
+            "Width": 52,
+            "Height": 15,
+            "TextId": "w5_hum_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hum_value",
+            "X": 514,
+            "Y": 120,
+            "Width": 51,
+            "Height": 28,
+            "TextId": "w5_hum_value",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "aq_chip",
+            "X": 637,
+            "Y": 90,
+            "Width": 131,
+            "Height": 70,
+            "RelativeFilename": "W5\\chip_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "aq_label",
+            "X": 651,
+            "Y": 100,
+            "Width": 58,
+            "Height": 15,
+            "TextId": "w5_aq_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "aq_value",
+            "X": 651,
+            "Y": 120,
+            "Width": 58,
+            "Height": 28,
+            "TextId": "w5_aq_value",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 225,
+              "Blue": 170
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "sched_title",
+            "X": 500,
+            "Y": 176,
+            "Width": 127,
+            "Height": 19,
+            "TextId": "w5_sched_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "row0",
+            "X": 500,
+            "Y": 202,
+            "Width": 268,
+            "Height": 50,
+            "RelativeFilename": "W5\\row_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row0_time",
+            "X": 514,
+            "Y": 218,
+            "Width": 44,
+            "Height": 19,
+            "TextId": "w5_row0_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row0_label",
+            "X": 572,
+            "Y": 215,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_row0_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row0_temp",
+            "X": 690,
+            "Y": 215,
+            "Width": 64,
+            "Height": 24,
+            "TextId": "w5_row0_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "row1",
+            "X": 500,
+            "Y": 258,
+            "Width": 268,
+            "Height": 50,
+            "RelativeFilename": "W5\\row_active.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row1_time",
+            "X": 514,
+            "Y": 274,
+            "Width": 44,
+            "Height": 19,
+            "TextId": "w5_row1_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row1_label",
+            "X": 572,
+            "Y": 271,
+            "Width": 51,
+            "Height": 24,
+            "TextId": "w5_row1_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row1_temp",
+            "X": 690,
+            "Y": 271,
+            "Width": 64,
+            "Height": 24,
+            "TextId": "w5_row1_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "row2",
+            "X": 500,
+            "Y": 314,
+            "Width": 268,
+            "Height": 50,
+            "RelativeFilename": "W5\\row_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row2_time",
+            "X": 514,
+            "Y": 330,
+            "Width": 39,
+            "Height": 19,
+            "TextId": "w5_row2_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row2_label",
+            "X": 572,
+            "Y": 327,
+            "Width": 55,
+            "Height": 24,
+            "TextId": "w5_row2_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row2_temp",
+            "X": 690,
+            "Y": 327,
+            "Width": 64,
+            "Height": 24,
+            "TextId": "w5_row2_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "row3",
+            "X": 500,
+            "Y": 370,
+            "Width": 268,
+            "Height": 50,
+            "RelativeFilename": "W5\\row_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row3_time",
+            "X": 514,
+            "Y": 386,
+            "Width": 43,
+            "Height": 19,
+            "TextId": "w5_row3_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row3_label",
+            "X": 572,
+            "Y": 383,
+            "Width": 53,
+            "Height": 24,
+            "TextId": "w5_row3_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "row3_temp",
+            "X": 690,
+            "Y": 383,
+            "Width": 64,
+            "Height": 24,
+            "TextId": "w5_row3_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onPlusClimateClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "plus_climate"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlusClimateClicked"
+            }
+          },
+          {
+            "InteractionName": "onMinusClimateClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "minus_climate"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onMinusClimateClicked"
+            }
+          },
+          {
+            "InteractionName": "onFanToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "fan_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onFanToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onAutoModeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "auto_mode"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAutoModeClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Lights",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "bg_5in",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_GTO2",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "light_text",
+            "X": 379,
+            "Y": 7,
+            "Width": 43,
+            "Height": 18,
+            "TextId": "__SingleUse_STD9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "light_bg",
+            "X": 14,
+            "Y": 50,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "lr_light",
+            "X": 49,
+            "Y": 73,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "lr_light_on",
+            "X": 49,
+            "Y": 73,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "lr_slider",
+            "X": 97,
+            "Y": 74,
+            "Width": 278,
+            "Height": 55,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg_2.png",
+            "BackgroundSelected": "Lights\\light_bar_main_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundY": 5,
+            "IndicatorPos": 20,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 400
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lr_toggle",
+            "X": 382,
+            "Y": 73,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "living_room",
+            "X": 98,
+            "Y": 64,
+            "Width": 106,
+            "Height": 23,
+            "TextId": "__SingleUse_2WDC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_bg",
+            "X": 14,
+            "Y": 130,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_light",
+            "X": 49,
+            "Y": 152,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "kitchen_light_on",
+            "X": 49,
+            "Y": 152,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "kitchen_slider",
+            "X": 97,
+            "Y": 154,
+            "Width": 278,
+            "Height": 55,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg_2.png",
+            "BackgroundSelected": "Lights\\light_bar_main_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundY": 5,
+            "IndicatorPos": 20,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 200
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "kitchen_toggle",
+            "X": 382,
+            "Y": 151,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "kitchen",
+            "X": 98,
+            "Y": 144,
+            "Width": 68,
+            "Height": 23,
+            "TextId": "__SingleUse_IQRM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_bg",
+            "X": 14,
+            "Y": 210,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "hallway_slider",
+            "X": 97,
+            "Y": 235,
+            "Width": 278,
+            "Height": 55,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg_2.png",
+            "BackgroundSelected": "Lights\\light_bar_main_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundY": 5,
+            "IndicatorPos": 20,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 310
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hallway",
+            "X": 98,
+            "Y": 226,
+            "Width": 73,
+            "Height": 23,
+            "TextId": "__SingleUse_668E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "hallway_toggle",
+            "X": 382,
+            "Y": 231,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_light",
+            "X": 49,
+            "Y": 232,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "hallway_light_on",
+            "X": 49,
+            "Y": 232,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_bg",
+            "X": 14,
+            "Y": 291,
+            "Width": 453,
+            "Height": 80,
+            "RelativeFilename": "Lights\\light_bg_section.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_light",
+            "X": 49,
+            "Y": 312,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_off_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conservatory_light_on",
+            "X": 49,
+            "Y": 312,
+            "Width": 24,
+            "Height": 37,
+            "RelativeFilename": "Lights\\light_on_small.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "conservatory_slider",
+            "X": 97,
+            "Y": 315,
+            "Width": 278,
+            "Height": 55,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg_2.png",
+            "BackgroundSelected": "Lights\\light_line_off_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundY": 5,
+            "IndicatorPos": 20,
+            "IndicatorMax": 243,
+            "ValueMax": 400,
+            "InitValue": 150
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "conservatory_toggle",
+            "X": 382,
+            "Y": 311,
+            "Width": 66,
+            "Height": 40,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "conservatory",
+            "X": 99,
+            "Y": 306,
+            "Width": 121,
+            "Height": 23,
+            "TextId": "__SingleUse_MV05",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "all_on_button",
+            "X": 16,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\all_on_2.png",
+            "Released": "Lights\\all_on_off_2.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "ambient_button",
+            "X": 167,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\ambient_on.png",
+            "Released": "Lights\\ambient_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedtime",
+            "X": 319,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "Lights\\all_off_on_2.png",
+            "Released": "Lights\\all_off_off_2.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_1",
+            "X": 362,
+            "Y": 405,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "star_2",
+            "X": 355,
+            "Y": 398,
+            "Width": 9,
+            "Height": 9,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\star.png",
+            "LockBitmapToCenter": true,
+            "Scale": 0.6,
+            "LockOrigoToCenter": true,
+            "XOrigo": 4.5,
+            "YOrigo": 4.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_body",
+            "X": 45,
+            "Y": 405,
+            "Width": 20,
+            "Height": 21,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_body.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 2.0,
+            "YBitmapPosition": 2.5,
+            "Scale": 1.2,
+            "LockOrigoToCenter": true,
+            "XOrigo": 10.0,
+            "YOrigo": 10.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "sun_beams",
+            "X": 36,
+            "Y": 396,
+            "Width": 38,
+            "Height": 38,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Main\\sun_beams.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 3.0,
+            "YBitmapPosition": 3.0,
+            "Scale": 1.2,
+            "LockOrigoToCenter": true,
+            "XOrigo": 19.0,
+            "YOrigo": 19.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "Image",
+            "Name": "room_panel",
+            "X": 482,
+            "Y": 50,
+            "Width": 304,
+            "Height": 315,
+            "RelativeFilename": "W5\\panel_lights.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_name",
+            "X": 500,
+            "Y": 64,
+            "Width": 107,
+            "Height": 24,
+            "TextId": "w5_room_name",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_level",
+            "X": 498,
+            "Y": 90,
+            "Width": 110,
+            "Height": 62,
+            "TextId": "w5_room_level",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_level_lbl",
+            "X": 502,
+            "Y": 150,
+            "Width": 61,
+            "Height": 15,
+            "TextId": "w5_room_level_lbl",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_colour",
+            "X": 500,
+            "Y": 178,
+            "Width": 49,
+            "Height": 19,
+            "TextId": "w5_room_colour",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch0",
+            "X": 498,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_0_sel.png",
+            "Released": "W5\\swatch_0.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch1",
+            "X": 543,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_1_sel.png",
+            "Released": "W5\\swatch_1.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch2",
+            "X": 588,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_2_sel.png",
+            "Released": "W5\\swatch_2.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch3",
+            "X": 633,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_3_sel.png",
+            "Released": "W5\\swatch_3.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch4",
+            "X": 678,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_4_sel.png",
+            "Released": "W5\\swatch_4.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "swatch5",
+            "X": 723,
+            "Y": 202,
+            "Width": 38,
+            "Height": 38,
+            "Pressed": "W5\\swatch_5_sel.png",
+            "Released": "W5\\swatch_5.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_warmth",
+            "X": 500,
+            "Y": 258,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "w5_room_warmth",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Slider",
+            "Name": "warmth_slider",
+            "X": 500,
+            "Y": 278,
+            "Width": 268,
+            "Height": 35,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "W5\\ct_bar.png",
+            "BackgroundSelected": "W5\\ct_bar.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundX": 17,
+            "BackgroundY": 12,
+            "IndicatorMax": 233,
+            "ValueMax": 100,
+            "InitValue": 35
+          },
+          {
+            "Type": "TextArea",
+            "Name": "room_power",
+            "X": 500,
+            "Y": 330,
+            "Width": 109,
+            "Height": 15,
+            "TextId": "w5_room_power",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "reading",
+            "X": 482,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "W5\\reading_on.png",
+            "Released": "W5\\reading_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "focus",
+            "X": 636,
+            "Y": 373,
+            "Width": 148,
+            "Height": 83,
+            "Pressed": "W5\\focus_on.png",
+            "Released": "W5\\focus_off.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onLRToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "lr_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLRToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onKitchenToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "kitchen_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onKitchenToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onHallwayToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "hallway_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onHallwayToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onConservatoryToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "conservatory_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onConservatoryToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onBedtimeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bedtime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBedtimeClicked"
+            }
+          },
+          {
+            "InteractionName": "onAllbuttonClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "all_on_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAllbuttonClicked"
+            }
+          },
+          {
+            "InteractionName": "onLRSliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "lr_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLRSliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onKitchenSliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "kitchen_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onKitchenSliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onHallwaySliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "hallway_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onHallwaySliderChanged"
+            }
+          },
+          {
+            "InteractionName": "onConservatorySliderChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "conservatory_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onConservatorySliderChanged"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Security",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "bg_5in",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "security_text",
+            "X": 370,
+            "Y": 7,
+            "Width": 60,
+            "Height": 18,
+            "TextId": "__SingleUse_D3PM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_2O3E",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lock_all_button",
+            "X": 14,
+            "Y": 381,
+            "Width": 453,
+            "Height": 78,
+            "Pressed": "Security\\lock_all_big.png",
+            "Released": "Security\\unlock_all_big.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_blue_bg_back",
+            "X": 14,
+            "Y": 43,
+            "Width": 451,
+            "Height": 138,
+            "RelativeFilename": "Security\\security_main_dark.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_blue_bg",
+            "X": 14,
+            "Y": 43,
+            "Width": 451,
+            "Height": 138,
+            "RelativeFilename": "Security\\security_main_bg.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_1",
+            "X": 15,
+            "Y": 183,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_2",
+            "X": 15,
+            "Y": 250,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "s_small_bg_3",
+            "X": 15,
+            "Y": 317,
+            "Width": 451,
+            "Height": 64,
+            "RelativeFilename": "Security\\security_small_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "blue_padlock",
+            "X": 55,
+            "Y": 75,
+            "Width": 53,
+            "Height": 74,
+            "Visible": false,
+            "RelativeFilename": "Security\\blue_padlock.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door",
+            "X": 132,
+            "Y": 80,
+            "Width": 91,
+            "Height": 23,
+            "TextId": "__SingleUse_QVWS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "front_door_status",
+            "X": 131,
+            "Y": 110,
+            "Width": 123,
+            "Height": 34,
+            "TextId": "__SingleUse_4XFU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "front_door_status",
+              "UseBuffer": true,
+              "BufferSize": 24
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "Door",
+            "X": 66,
+            "Y": 192,
+            "Width": 32,
+            "Height": 47,
+            "RelativeFilename": "Security\\door.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "Door_1",
+            "X": 59,
+            "Y": 261,
+            "Width": 46,
+            "Height": 43,
+            "RelativeFilename": "Security\\garage.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "Door_1_1",
+            "X": 66,
+            "Y": 330,
+            "Width": 32,
+            "Height": 38,
+            "RelativeFilename": "Security\\sheild_tick.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "back_door",
+            "X": 132,
+            "Y": 192,
+            "Width": 90,
+            "Height": 23,
+            "TextId": "__SingleUse_G75F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "back_door_status",
+            "X": 132,
+            "Y": 219,
+            "Width": 74,
+            "Height": 18,
+            "TextId": "__SingleUse_4NY4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "back_door_status",
+              "UseBuffer": true,
+              "BufferSize": 14
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "garage",
+            "X": 132,
+            "Y": 259,
+            "Width": 66,
+            "Height": 23,
+            "TextId": "__SingleUse_4K3I",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "garage_status",
+            "X": 132,
+            "Y": 286,
+            "Width": 116,
+            "Height": 18,
+            "TextId": "__SingleUse_QDHN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "garage_status",
+              "UseBuffer": true,
+              "BufferSize": 33
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "alarm",
+            "X": 132,
+            "Y": 326,
+            "Width": 123,
+            "Height": 23,
+            "TextId": "__SingleUse_6US7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "alarm_status",
+            "X": 131,
+            "Y": 353,
+            "Width": 70,
+            "Height": 18,
+            "TextId": "__SingleUse_WXCT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 112,
+              "Green": 172,
+              "Blue": 244
+            },
+            "Wildcard1": {
+              "TextId": "alarm_status",
+              "UseBuffer": true,
+              "BufferSize": 14
+            },
+            "Fadeable": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "alarm_toggle",
+            "X": 375,
+            "Y": 330,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "garage_toggle",
+            "X": 375,
+            "Y": 263,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "back_door_toggle",
+            "X": 375,
+            "Y": 196,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "front_door_toggle",
+            "X": 375,
+            "Y": 93,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "blue_lock",
+            "X": 78,
+            "Y": 66,
+            "Width": 40,
+            "Height": 51,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Security\\blue_lock.png",
+            "LockBitmapToCenter": true,
+            "YAngle": 3.0,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 20.0,
+            "YOrigo": 25.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "blue_body",
+            "X": 40,
+            "Y": 107,
+            "Width": 53,
+            "Height": 45,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "Security\\blue_body.png",
+            "LockBitmapToCenter": true,
+            "Scale": 1.0,
+            "LockOrigoToCenter": true,
+            "XOrigo": 26.5,
+            "YOrigo": 22.5,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0,
+            "Fadeable": true,
+            "Moveable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "sec_panel",
+            "X": 482,
+            "Y": 43,
+            "Width": 304,
+            "Height": 416,
+            "RelativeFilename": "W5\\panel_security.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "sec_shield",
+            "X": 500,
+            "Y": 60,
+            "Width": 32,
+            "Height": 38,
+            "RelativeFilename": "Security\\sheild_tick.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "sec_state",
+            "X": 546,
+            "Y": 58,
+            "Width": 131,
+            "Height": 24,
+            "TextId": "w5_sec_state",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "sec_state2",
+            "X": 546,
+            "Y": 84,
+            "Width": 100,
+            "Height": 15,
+            "TextId": "w5_sec_state2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 95,
+              "Green": 165,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "sec_log_title",
+            "X": 500,
+            "Y": 128,
+            "Width": 107,
+            "Height": 19,
+            "TextId": "w5_sec_log_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log0_dot",
+            "X": 502,
+            "Y": 163,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_amber.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log0_event",
+            "X": 522,
+            "Y": 158,
+            "Width": 143,
+            "Height": 19,
+            "TextId": "w5_log0_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log0_time",
+            "X": 522,
+            "Y": 179,
+            "Width": 68,
+            "Height": 15,
+            "TextId": "w5_log0_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log1_dot",
+            "X": 502,
+            "Y": 212,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_blue.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log1_event",
+            "X": 522,
+            "Y": 207,
+            "Width": 123,
+            "Height": 19,
+            "TextId": "w5_log1_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log1_time",
+            "X": 522,
+            "Y": 228,
+            "Width": 70,
+            "Height": 15,
+            "TextId": "w5_log1_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log2_dot",
+            "X": 502,
+            "Y": 261,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_amber.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log2_event",
+            "X": 522,
+            "Y": 256,
+            "Width": 126,
+            "Height": 19,
+            "TextId": "w5_log2_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log2_time",
+            "X": 522,
+            "Y": 277,
+            "Width": 70,
+            "Height": 15,
+            "TextId": "w5_log2_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log3_dot",
+            "X": 502,
+            "Y": 310,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_green.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log3_event",
+            "X": 522,
+            "Y": 305,
+            "Width": 105,
+            "Height": 19,
+            "TextId": "w5_log3_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log3_time",
+            "X": 522,
+            "Y": 326,
+            "Width": 70,
+            "Height": 15,
+            "TextId": "w5_log3_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log4_dot",
+            "X": 502,
+            "Y": 359,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_green.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log4_event",
+            "X": 522,
+            "Y": 354,
+            "Width": 127,
+            "Height": 19,
+            "TextId": "w5_log4_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log4_time",
+            "X": 522,
+            "Y": 375,
+            "Width": 70,
+            "Height": 15,
+            "TextId": "w5_log4_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "log5_dot",
+            "X": 502,
+            "Y": 408,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\dot_blue.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log5_event",
+            "X": 522,
+            "Y": 403,
+            "Width": 114,
+            "Height": 19,
+            "TextId": "w5_log5_event",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "log5_time",
+            "X": 522,
+            "Y": 424,
+            "Width": 71,
+            "Height": 15,
+            "TextId": "w5_log5_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onFrontDoorToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "front_door_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onFrontDoorToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onBackDoorToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_door_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackDoorToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onGarageToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "garage_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onGarageToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onAlarmToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "alarm_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAlarmToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "onLockAllToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "lock_all_button"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLockAllToggleClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Music",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "FM_blurred_bg",
+            "X": 1,
+            "Width": 801,
+            "Height": 481,
+            "RelativeFilename": "Music\\FM_bg.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_FQ0V",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "security_text",
+            "X": 365,
+            "Y": 7,
+            "Width": 44,
+            "Height": 18,
+            "TextId": "__SingleUse_CTZD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "album_cover",
+            "X": 15,
+            "Y": 46,
+            "Width": 172,
+            "Height": 172,
+            "RelativeFilename": "Music\\cover_art_FM.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "timeline_music",
+            "X": 8,
+            "Y": 236,
+            "Width": 485,
+            "Height": 31,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Music\\music_timeline_bg_2.png",
+            "BackgroundSelected": "Music\\music_timeline_front_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundX": 7,
+            "BackgroundY": 6,
+            "IndicatorPos": -4,
+            "IndicatorMax": 450,
+            "IndicatorMin": 1,
+            "ValueMax": 300
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_track",
+            "X": 205,
+            "Y": 128,
+            "Width": 250,
+            "Height": 34,
+            "TextId": "__SingleUse_A37C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "music_track_large"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "music_artist",
+            "X": 206,
+            "Y": 175,
+            "Width": 138,
+            "Height": 23,
+            "TextId": "__SingleUse_T5IQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 199,
+              "Green": 199,
+              "Blue": 199
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "music_artist_large"
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "play_pause_music",
+            "X": 212,
+            "Y": 272,
+            "Width": 56,
+            "Height": 56,
+            "Pressed": "Music\\large_pause.png",
+            "Released": "Music\\large_play.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "skip_music",
+            "X": 330,
+            "Y": 270,
+            "Width": 61,
+            "Height": 61,
+            "Pressed": "Music\\large_skip.png",
+            "Released": "Music\\large_skip.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "back_music",
+            "X": 81,
+            "Y": 270,
+            "Width": 61,
+            "Height": 61,
+            "Pressed": "Music\\large_back.png",
+            "Released": "Music\\large_back.png"
+          },
+          {
+            "Type": "Slider",
+            "Name": "volume_slider",
+            "X": 53,
+            "Y": 343,
+            "Width": 391,
+            "Height": 31,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Music\\volume_slide_bg_2.png",
+            "BackgroundSelected": "Music\\volume_slide_main_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundX": 7,
+            "BackgroundY": 6,
+            "IndicatorPos": -4,
+            "IndicatorMax": 356,
+            "IndicatorMin": 1,
+            "ValueMax": 100,
+            "InitValue": 70
+          },
+          {
+            "Type": "Image",
+            "Name": "speaker_mute",
+            "X": 23,
+            "Y": 346,
+            "Width": 14,
+            "Height": 18,
+            "RelativeFilename": "Music\\speaker_mute_small.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "speaker_mute_1",
+            "X": 438,
+            "Y": 345,
+            "Width": 24,
+            "Height": 19,
+            "RelativeFilename": "Music\\speaker_loud_small.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "time_remaining",
+            "X": 441,
+            "Y": 259,
+            "Width": 30,
+            "Height": 15,
+            "TextId": "__SingleUse_JMQD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "time_remaining_wc"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "time_elapsed",
+            "X": 11,
+            "Y": 259,
+            "Width": 24,
+            "Height": 15,
+            "TextId": "__SingleUse_72EN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "time_elapsed_wc"
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "lr_music",
+            "X": 15,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "InitialStatePressed": true,
+            "Pressed": "Music\\living_music_on.png",
+            "Released": "Music\\Living_music_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "kitchen_music",
+            "X": 166,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "Music\\kitchen_music_on.png",
+            "Released": "Music\\kitchen_music_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bedroom_music",
+            "X": 317,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "Music\\bedroom_music_on.png",
+            "Released": "Music\\bedroom_music_off.png"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "music_ani_music",
+            "X": 413,
+            "Y": -2,
+            "Width": 40,
+            "Height": 40,
+            "FileNameFirst": "music_ani_large\\music_ani_large_00000.png",
+            "FileNameLast": "music_ani_large\\music_ani_large_00029.png",
+            "UpdateTicksInterval": 60,
+            "LoopEnabled": true,
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "music_off",
+            "X": 414,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "Music\\music_off_3.png",
+            "Fadeable": true
+          },
+          {
+            "Type": "Image",
+            "Name": "queue_panel",
+            "X": 505,
+            "Y": 46,
+            "Width": 281,
+            "Height": 322,
+            "RelativeFilename": "W5\\panel_glass_dark.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "queue_title",
+            "X": 521,
+            "Y": 60,
+            "Width": 57,
+            "Height": 19,
+            "TextId": "w5_queue_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "q1_art",
+            "X": 521,
+            "Y": 90,
+            "Width": 61,
+            "Height": 61,
+            "RelativeFilename": "Main\\album_2.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q1_track",
+            "X": 594,
+            "Y": 98,
+            "Width": 63,
+            "Height": 24,
+            "TextId": "w5_q1_track",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q1_artist",
+            "X": 594,
+            "Y": 124,
+            "Width": 60,
+            "Height": 15,
+            "TextId": "w5_q1_artist",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "q2_art",
+            "X": 521,
+            "Y": 165,
+            "Width": 61,
+            "Height": 61,
+            "RelativeFilename": "Main\\album_3.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q2_track",
+            "X": 594,
+            "Y": 173,
+            "Width": 93,
+            "Height": 24,
+            "TextId": "w5_q2_track",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q2_artist",
+            "X": 594,
+            "Y": 199,
+            "Width": 66,
+            "Height": 15,
+            "TextId": "w5_q2_artist",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "q3_art",
+            "X": 521,
+            "Y": 240,
+            "Width": 61,
+            "Height": 61,
+            "RelativeFilename": "Main\\Album_1.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q3_track",
+            "X": 594,
+            "Y": 248,
+            "Width": 94,
+            "Height": 24,
+            "TextId": "w5_q3_track",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "q3_artist",
+            "X": 594,
+            "Y": 274,
+            "Width": 88,
+            "Height": 15,
+            "TextId": "w5_q3_artist",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "queue_foot",
+            "X": 521,
+            "Y": 330,
+            "Width": 105,
+            "Height": 15,
+            "TextId": "w5_queue_foot",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "garden_music",
+            "X": 482,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "W5\\garden_music_on.png",
+            "Released": "W5\\garden_music_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "office_music",
+            "X": 635,
+            "Y": 381,
+            "Width": 148,
+            "Height": 84,
+            "Pressed": "W5\\office_music_on.png",
+            "Released": "W5\\office_music_off.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "onSkipClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "skip_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onSkipClicked"
+            }
+          },
+          {
+            "InteractionName": "onBackClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBackClicked"
+            }
+          },
+          {
+            "InteractionName": "onPlayPauseClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play_pause_music"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onPlayPauseClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
+          },
+          {
+            "InteractionName": "back_5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Settings",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "bg_5in",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_GTO2",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "title",
+            "X": 372,
+            "Y": 7,
+            "Width": 60,
+            "Height": 19,
+            "TextId": "w5_set_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "display_panel",
+            "X": 15,
+            "Y": 50,
+            "Width": 377,
+            "Height": 250,
+            "RelativeFilename": "W5\\panel_settings_l.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "display_hdr",
+            "X": 33,
+            "Y": 64,
+            "Width": 54,
+            "Height": 19,
+            "TextId": "w5_set_display_hdr",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "bright_lbl",
+            "X": 33,
+            "Y": 98,
+            "Width": 98,
+            "Height": 24,
+            "TextId": "w5_set_bright_lbl",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "bright_val",
+            "X": 290,
+            "Y": 96,
+            "Width": 84,
+            "Height": 28,
+            "TextId": "w5_set_bright_val",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "w5_set_bright_val_init",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "bright_slider",
+            "X": 33,
+            "Y": 124,
+            "Width": 278,
+            "Height": 55,
+            "IsHorizontalSlider": true,
+            "BackgroundUnselected": "Lights\\light_bar_bg_2.png",
+            "BackgroundSelected": "Lights\\light_bar_main_2.png",
+            "Indicator": "Lights\\slider_indicator_large.png",
+            "BackgroundY": 5,
+            "IndicatorPos": 20,
+            "IndicatorMax": 243,
+            "ValueMax": 100,
+            "ValueMin": 10,
+            "InitValue": 100
+          },
+          {
+            "Type": "TextArea",
+            "Name": "led_lbl",
+            "X": 33,
+            "Y": 208,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_set_led_lbl",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "led_sub",
+            "X": 33,
+            "Y": 234,
+            "Width": 127,
+            "Height": 15,
+            "TextId": "w5_set_led_sub",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "led_toggle",
+            "X": 308,
+            "Y": 206,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\yellow_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "conn_panel",
+            "X": 408,
+            "Y": 50,
+            "Width": 377,
+            "Height": 250,
+            "RelativeFilename": "W5\\panel_settings_r.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "conn_hdr",
+            "X": 426,
+            "Y": 64,
+            "Width": 92,
+            "Height": 19,
+            "TextId": "w5_set_conn_hdr",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi_icon",
+            "X": 428,
+            "Y": 106,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "wifi_lbl",
+            "X": 456,
+            "Y": 98,
+            "Width": 50,
+            "Height": 24,
+            "TextId": "w5_set_wifi_lbl",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "wifi_status",
+            "X": 456,
+            "Y": 124,
+            "Width": 200,
+            "Height": 15,
+            "TextId": "w5_set_wifi_status",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 95,
+              "Green": 165,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "w5_set_wifi_status_init",
+              "UseBuffer": true,
+              "BufferSize": 24
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "wifi_toggle",
+            "X": 701,
+            "Y": 100,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt_icon",
+            "X": 432,
+            "Y": 190,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "bt_lbl",
+            "X": 456,
+            "Y": 182,
+            "Width": 88,
+            "Height": 24,
+            "TextId": "w5_set_bt_lbl",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "bt_status",
+            "X": 456,
+            "Y": 208,
+            "Width": 200,
+            "Height": 15,
+            "TextId": "w5_set_bt_status",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 95,
+              "Green": 165,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "w5_set_bt_status_init",
+              "UseBuffer": true,
+              "BufferSize": 24
+            }
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "bt_toggle",
+            "X": 701,
+            "Y": 184,
+            "Width": 66,
+            "Height": 40,
+            "InitialStatePressed": true,
+            "Pressed": "Lights\\blue_toggle.png",
+            "Released": "Lights\\white_toggle.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "about_panel",
+            "X": 15,
+            "Y": 312,
+            "Width": 770,
+            "Height": 150,
+            "RelativeFilename": "W5\\panel_settings_about.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about_hdr",
+            "X": 33,
+            "Y": 326,
+            "Width": 125,
+            "Height": 19,
+            "TextId": "w5_set_about_hdr",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about0_k",
+            "X": 33,
+            "Y": 354,
+            "Width": 43,
+            "Height": 15,
+            "TextId": "w5_set_about0_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about0_v",
+            "X": 33,
+            "Y": 372,
+            "Width": 120,
+            "Height": 24,
+            "TextId": "w5_set_about0_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about1_k",
+            "X": 283,
+            "Y": 354,
+            "Width": 59,
+            "Height": 15,
+            "TextId": "w5_set_about1_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about1_v",
+            "X": 283,
+            "Y": 372,
+            "Width": 118,
+            "Height": 24,
+            "TextId": "w5_set_about1_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about2_k",
+            "X": 533,
+            "Y": 354,
+            "Width": 54,
+            "Height": 15,
+            "TextId": "w5_set_about2_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about2_v",
+            "X": 533,
+            "Y": 372,
+            "Width": 37,
+            "Height": 24,
+            "TextId": "w5_set_about2_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about3_k",
+            "X": 33,
+            "Y": 406,
+            "Width": 52,
+            "Height": 15,
+            "TextId": "w5_set_about3_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about3_v",
+            "X": 33,
+            "Y": 424,
+            "Width": 141,
+            "Height": 24,
+            "TextId": "w5_set_about3_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about4_k",
+            "X": 283,
+            "Y": 406,
+            "Width": 77,
+            "Height": 15,
+            "TextId": "w5_set_about4_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about4_v",
+            "X": 283,
+            "Y": 424,
+            "Width": 110,
+            "Height": 24,
+            "TextId": "w5_set_about4_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about5_k",
+            "X": 533,
+            "Y": 406,
+            "Width": 41,
+            "Height": 15,
+            "TextId": "w5_set_about5_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "about5_v",
+            "X": 533,
+            "Y": 424,
+            "Width": 157,
+            "Height": 24,
+            "TextId": "w5_set_about5_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_settings",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onBrightnessChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "bright_slider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBrightnessChanged"
+            }
+          },
+          {
+            "InteractionName": "onLedToggled",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "led_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLedToggled"
+            }
+          },
+          {
+            "InteractionName": "onWifiToggled",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "wifi_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onWifiToggled"
+            }
+          },
+          {
+            "InteractionName": "onBtToggled",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bt_toggle"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onBtToggled"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Energy",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "bg_5in",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "W5\\bg_dark.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_GTO2",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "title",
+            "X": 374,
+            "Y": 7,
+            "Width": 52,
+            "Height": 19,
+            "TextId": "w5_en_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chart_panel",
+            "X": 15,
+            "Y": 50,
+            "Width": 500,
+            "Height": 300,
+            "RelativeFilename": "W5\\panel_energy_chart.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chart_title",
+            "X": 33,
+            "Y": 64,
+            "Width": 96,
+            "Height": 19,
+            "TextId": "w5_en_chart_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "week_btn",
+            "X": 325,
+            "Y": 60,
+            "Width": 92,
+            "Height": 34,
+            "InitialStatePressed": true,
+            "Pressed": "W5\\seg_week_on.png",
+            "Released": "W5\\seg_week_off.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "month_btn",
+            "X": 419,
+            "Y": 60,
+            "Width": 92,
+            "Height": 34,
+            "Pressed": "W5\\seg_month_on.png",
+            "Released": "W5\\seg_month_off.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "total_value",
+            "X": 33,
+            "Y": 84,
+            "Width": 200,
+            "Height": 35,
+            "TextId": "w5_en_total_value",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "w5_en_total_value_init",
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "total_label",
+            "X": 33,
+            "Y": 120,
+            "Width": 260,
+            "Height": 15,
+            "TextId": "w5_en_total_label",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "Wildcard1": {
+              "TextId": "w5_en_total_label_init",
+              "UseBuffer": true,
+              "BufferSize": 40
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "chart_week",
+            "X": 33,
+            "Y": 136,
+            "Width": 470,
+            "Height": 210,
+            "RelativeFilename": "W5\\chart_week.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "chart_month",
+            "X": 33,
+            "Y": 136,
+            "Width": 470,
+            "Height": 210,
+            "Visible": false,
+            "RelativeFilename": "W5\\chart_month.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "stat0_bg",
+            "X": 530,
+            "Y": 50,
+            "Width": 255,
+            "Height": 94,
+            "RelativeFilename": "W5\\stat_used.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat0_k",
+            "X": 548,
+            "Y": 62,
+            "Width": 66,
+            "Height": 15,
+            "TextId": "w5_en_stat0_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat0_v",
+            "X": 548,
+            "Y": 80,
+            "Width": 124,
+            "Height": 35,
+            "TextId": "w5_en_stat0_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat0_s",
+            "X": 548,
+            "Y": 118,
+            "Width": 132,
+            "Height": 15,
+            "TextId": "w5_en_stat0_s",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 225,
+              "Blue": 170
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "stat1_bg",
+            "X": 530,
+            "Y": 153,
+            "Width": 255,
+            "Height": 94,
+            "RelativeFilename": "W5\\stat_solar.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat1_k",
+            "X": 548,
+            "Y": 165,
+            "Width": 91,
+            "Height": 15,
+            "TextId": "w5_en_stat1_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat1_v",
+            "X": 548,
+            "Y": 183,
+            "Width": 102,
+            "Height": 35,
+            "TextId": "w5_en_stat1_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat1_s",
+            "X": 548,
+            "Y": 221,
+            "Width": 108,
+            "Height": 15,
+            "TextId": "w5_en_stat1_s",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 225,
+              "Blue": 170
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "stat2_bg",
+            "X": 530,
+            "Y": 256,
+            "Width": 255,
+            "Height": 94,
+            "RelativeFilename": "W5\\stat_cost.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat2_k",
+            "X": 548,
+            "Y": 268,
+            "Width": 62,
+            "Height": 15,
+            "TextId": "w5_en_stat2_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat2_v",
+            "X": 548,
+            "Y": 286,
+            "Width": 76,
+            "Height": 35,
+            "TextId": "w5_en_stat2_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stat2_s",
+            "X": 548,
+            "Y": 324,
+            "Width": 117,
+            "Height": 15,
+            "TextId": "w5_en_stat2_s",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 95,
+              "Green": 165,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "split_panel",
+            "X": 15,
+            "Y": 362,
+            "Width": 770,
+            "Height": 100,
+            "RelativeFilename": "W5\\panel_energy_split.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "split_title",
+            "X": 33,
+            "Y": 374,
+            "Width": 145,
+            "Height": 19,
+            "TextId": "w5_en_split_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 156,
+              "Blue": 164
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "split_bar",
+            "X": 33,
+            "Y": 402,
+            "Width": 734,
+            "Height": 14,
+            "RelativeFilename": "W5\\split_bar.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "split_dot0",
+            "X": 33,
+            "Y": 436,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\split_dot0.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "split_lbl0",
+            "X": 49,
+            "Y": 431,
+            "Width": 99,
+            "Height": 19,
+            "TextId": "w5_en_split_lbl0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "split_dot1",
+            "X": 223,
+            "Y": 436,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\split_dot1.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "split_lbl1",
+            "X": 239,
+            "Y": 431,
+            "Width": 97,
+            "Height": 19,
+            "TextId": "w5_en_split_lbl1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "split_dot2",
+            "X": 413,
+            "Y": 436,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\split_dot2.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "split_lbl2",
+            "X": 429,
+            "Y": 431,
+            "Width": 83,
+            "Height": 19,
+            "TextId": "w5_en_split_lbl2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "split_dot3",
+            "X": 603,
+            "Y": 436,
+            "Width": 10,
+            "Height": 10,
+            "RelativeFilename": "W5\\split_dot3.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "split_lbl3",
+            "X": 619,
+            "Y": 431,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_en_split_lbl3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "back_energy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "onWeekClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "week_btn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onWeekClicked"
+            }
+          },
+          {
+            "InteractionName": "onMonthClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "month_btn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onMonthClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Weather",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "sky",
+            "X": -1,
+            "Width": 802,
+            "Height": 481,
+            "RelativeFilename": "Default\\weather_background_sunny.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "bt",
+            "X": 698,
+            "Y": 9,
+            "Width": 8,
+            "Height": 14,
+            "RelativeFilename": "Main\\bt.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "wifi",
+            "X": 714,
+            "Y": 9,
+            "Width": 17,
+            "Height": 13,
+            "RelativeFilename": "Main\\wifi.png"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "back_flex",
+            "X": 12,
+            "Width": 62,
+            "Height": 43,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "ImageButtonStyle",
+                "X": 3,
+                "Y": 7,
+                "ImageReleased": "Main\\back_unclicked_2.png",
+                "ImagePressed": "Main\\back_clicked_2.png"
+              }
+            ]
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 746,
+            "Y": 7,
+            "Width": 40,
+            "Height": 18,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_GTO2",
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 13,
+            "InitialMinute": 48
+          },
+          {
+            "Type": "TextArea",
+            "Name": "title",
+            "X": 369,
+            "Y": 7,
+            "Width": 62,
+            "Height": 19,
+            "TextId": "w5_wx_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "now_icon",
+            "X": 30,
+            "Y": 58,
+            "Width": 96,
+            "Height": 96,
+            "RelativeFilename": "W5\\wx_sun_96.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "now_temp",
+            "X": 140,
+            "Y": 46,
+            "Width": 152,
+            "Height": 110,
+            "TextId": "w5_wx_now_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "now_cond",
+            "X": 146,
+            "Y": 152,
+            "Width": 85,
+            "Height": 35,
+            "TextId": "w5_wx_now_cond",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "now_feels",
+            "X": 36,
+            "Y": 196,
+            "Width": 192,
+            "Height": 19,
+            "TextId": "w5_wx_now_feels",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chip0",
+            "X": 33,
+            "Y": 232,
+            "Width": 112,
+            "Height": 70,
+            "RelativeFilename": "W5\\glass_chip.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip0_k",
+            "X": 45,
+            "Y": 242,
+            "Width": 52,
+            "Height": 15,
+            "TextId": "w5_wx_chip0_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip0_v",
+            "X": 45,
+            "Y": 264,
+            "Width": 44,
+            "Height": 24,
+            "TextId": "w5_wx_chip0_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chip1",
+            "X": 151,
+            "Y": 232,
+            "Width": 112,
+            "Height": 70,
+            "RelativeFilename": "W5\\glass_chip.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip1_k",
+            "X": 163,
+            "Y": 242,
+            "Width": 31,
+            "Height": 15,
+            "TextId": "w5_wx_chip1_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip1_v",
+            "X": 163,
+            "Y": 264,
+            "Width": 64,
+            "Height": 24,
+            "TextId": "w5_wx_chip1_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chip2",
+            "X": 269,
+            "Y": 232,
+            "Width": 112,
+            "Height": 70,
+            "RelativeFilename": "W5\\glass_chip.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip2_k",
+            "X": 281,
+            "Y": 242,
+            "Width": 52,
+            "Height": 15,
+            "TextId": "w5_wx_chip2_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip2_v",
+            "X": 281,
+            "Y": 264,
+            "Width": 61,
+            "Height": 24,
+            "TextId": "w5_wx_chip2_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "chip3",
+            "X": 387,
+            "Y": 232,
+            "Width": 112,
+            "Height": 70,
+            "RelativeFilename": "W5\\glass_chip.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip3_k",
+            "X": 399,
+            "Y": 242,
+            "Width": 41,
+            "Height": 15,
+            "TextId": "w5_wx_chip3_k",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "chip3_v",
+            "X": 399,
+            "Y": 264,
+            "Width": 51,
+            "Height": 24,
+            "TextId": "w5_wx_chip3_v",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "days_glass",
+            "X": 520,
+            "Y": 50,
+            "Width": 265,
+            "Height": 262,
+            "RelativeFilename": "W5\\glass_5day.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "days_title",
+            "X": 538,
+            "Y": 62,
+            "Width": 106,
+            "Height": 19,
+            "TextId": "w5_wx_days_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d0_day",
+            "X": 538,
+            "Y": 96,
+            "Width": 42,
+            "Height": 24,
+            "TextId": "w5_wx_d0_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "d0_icon",
+            "X": 606,
+            "Y": 89,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_sun_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d0_temp",
+            "X": 667,
+            "Y": 96,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_wx_d0_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d1_day",
+            "X": 538,
+            "Y": 138,
+            "Width": 37,
+            "Height": 24,
+            "TextId": "w5_wx_d1_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "d1_icon",
+            "X": 606,
+            "Y": 131,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d1_temp",
+            "X": 667,
+            "Y": 138,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_wx_d1_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d2_day",
+            "X": 538,
+            "Y": 180,
+            "Width": 25,
+            "Height": 24,
+            "TextId": "w5_wx_d2_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "d2_icon",
+            "X": 606,
+            "Y": 173,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_rain_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d2_temp",
+            "X": 667,
+            "Y": 180,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_wx_d2_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d3_day",
+            "X": 538,
+            "Y": 222,
+            "Width": 31,
+            "Height": 24,
+            "TextId": "w5_wx_d3_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "d3_icon",
+            "X": 606,
+            "Y": 215,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_cloud_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d3_temp",
+            "X": 667,
+            "Y": 222,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_wx_d3_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d4_day",
+            "X": 538,
+            "Y": 264,
+            "Width": 37,
+            "Height": 24,
+            "TextId": "w5_wx_d4_day",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "d4_icon",
+            "X": 606,
+            "Y": 257,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "d4_temp",
+            "X": 667,
+            "Y": 264,
+            "Width": 100,
+            "Height": 24,
+            "TextId": "w5_wx_d4_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "hours_glass",
+            "X": 15,
+            "Y": 322,
+            "Width": 770,
+            "Height": 140,
+            "RelativeFilename": "W5\\glass_hourly.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hours_title",
+            "X": 33,
+            "Y": 333,
+            "Width": 46,
+            "Height": 19,
+            "TextId": "w5_wx_hours_title",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h0_time",
+            "X": 39,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h0_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
               "Blue": 245
             }
           },
           {
-            "Type": "Circle",
-            "Name": "circle1",
-            "X": 360,
-            "Y": 200,
-            "Width": 80,
-            "Height": 80,
-            "Color": {
-              "Red": 86,
-              "Green": 242,
-              "Blue": 39
-            },
-            "CenterX": 40.0,
-            "CenterY": 40.0,
-            "Radius": 40.0,
-            "EndAngle": 360.0,
-            "CapPrecision": "Butt"
+            "Type": "Image",
+            "Name": "h0_icon",
+            "X": 61,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_sun_36.png"
           },
           {
-            "Type": "Shape",
-            "Name": "shape1",
-            "X": 650,
-            "Y": 200,
+            "Type": "TextArea",
+            "Name": "h0_temp",
+            "X": 39,
+            "Y": 428,
             "Width": 80,
-            "Height": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h0_temp",
+            "TextRotation": "0",
             "Color": {
-              "Red": 245,
-              "Green": 7,
-              "Blue": 7
-            },
-            "Points": [
-              {
-                "X": 40.0
-              },
-              {
-                "X": 80.0,
-                "Y": 40.0
-              },
-              {
-                "X": 40.0,
-                "Y": 80.0
-              },
-              {
-                "Y": 40.0
-              }
-            ],
-            "XScale": 1.0,
-            "YScale": 1.0
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h1_time",
+            "X": 131,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h1_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h1_icon",
+            "X": 153,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_sun_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h1_temp",
+            "X": 131,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h1_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h2_time",
+            "X": 223,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h2_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h2_icon",
+            "X": 245,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_sun_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h2_temp",
+            "X": 223,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h2_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h3_time",
+            "X": 315,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h3_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h3_icon",
+            "X": 337,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h3_temp",
+            "X": 315,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h3_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h4_time",
+            "X": 407,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h4_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h4_icon",
+            "X": 429,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h4_temp",
+            "X": 407,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h4_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h5_time",
+            "X": 499,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h5_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h5_icon",
+            "X": 521,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_partly_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h5_temp",
+            "X": 499,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h5_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h6_time",
+            "X": 591,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h6_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h6_icon",
+            "X": 613,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_cloud_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h6_temp",
+            "X": 591,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h6_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h7_time",
+            "X": 683,
+            "Y": 360,
+            "Width": 80,
+            "Height": 19,
+            "TextId": "w5_wx_h7_time",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 235,
+              "Blue": 245
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "h7_icon",
+            "X": 705,
+            "Y": 386,
+            "Width": 36,
+            "Height": 36,
+            "RelativeFilename": "W5\\wx_moon_36.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "h7_temp",
+            "X": 683,
+            "Y": 428,
+            "Width": 80,
+            "Height": 24,
+            "TextId": "w5_wx_h7_temp",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "back_weather",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back_flex"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -209,7 +6196,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Splash",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

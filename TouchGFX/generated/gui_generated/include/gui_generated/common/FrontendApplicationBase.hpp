@@ -17,25 +17,81 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoScreen1ScreenNoTransition();
+        gotoSplashScreenNoTransition();
     }
 
-    // Screen1
-    void gotoScreen1ScreenNoTransition();
+    // Splash
+    void gotoSplashScreenNoTransition();
 
-    // Screen2
-    void gotoScreen2ScreenNoTransition();
+    // Default
+    void gotoDefaultScreenNoTransition();
+
+    void gotoDefaultScreenSlideTransitionWest();
+
+    // Main
+    void gotoMainScreenCoverTransitionSouth();
+
+    void gotoMainScreenSlideTransitionWest();
+
+    // Climate
+    void gotoClimateScreenCoverTransitionEast();
+
+    // Lights
+    void gotoLightsScreenCoverTransitionEast();
+
+    // Security
+    void gotoSecurityScreenCoverTransitionEast();
+
+    // Music
+    void gotoMusicScreenCoverTransitionEast();
+
+    // Settings
+    void gotoSettingsScreenCoverTransitionEast();
+
+    // Energy
+    void gotoEnergyScreenCoverTransitionEast();
+
+    // Weather
+    void gotoWeatherScreenCoverTransitionEast();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
     Model& model;
 
-    // Screen1
-    void gotoScreen1ScreenNoTransitionImpl();
+    // Splash
+    void gotoSplashScreenNoTransitionImpl();
 
-    // Screen2
-    void gotoScreen2ScreenNoTransitionImpl();
+    // Default
+    void gotoDefaultScreenNoTransitionImpl();
+
+    void gotoDefaultScreenSlideTransitionWestImpl();
+
+    // Main
+    void gotoMainScreenCoverTransitionSouthImpl();
+
+    void gotoMainScreenSlideTransitionWestImpl();
+
+    // Climate
+    void gotoClimateScreenCoverTransitionEastImpl();
+
+    // Lights
+    void gotoLightsScreenCoverTransitionEastImpl();
+
+    // Security
+    void gotoSecurityScreenCoverTransitionEastImpl();
+
+    // Music
+    void gotoMusicScreenCoverTransitionEastImpl();
+
+    // Settings
+    void gotoSettingsScreenCoverTransitionEastImpl();
+
+    // Energy
+    void gotoEnergyScreenCoverTransitionEastImpl();
+
+    // Weather
+    void gotoWeatherScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

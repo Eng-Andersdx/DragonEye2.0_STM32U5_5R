@@ -9,13 +9,32 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <gui/screen2_screen/Screen2View.hpp>
-#include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <gui/splash_screen/SplashView.hpp>
+#include <gui/splash_screen/SplashPresenter.hpp>
+#include <gui/default_screen/DefaultView.hpp>
+#include <gui/default_screen/DefaultPresenter.hpp>
+#include <gui/main_screen/MainView.hpp>
+#include <gui/main_screen/MainPresenter.hpp>
+#include <gui/climate_screen/ClimateView.hpp>
+#include <gui/climate_screen/ClimatePresenter.hpp>
+#include <gui/lights_screen/LightsView.hpp>
+#include <gui/lights_screen/LightsPresenter.hpp>
+#include <gui/security_screen/SecurityView.hpp>
+#include <gui/security_screen/SecurityPresenter.hpp>
+#include <gui/music_screen/MusicView.hpp>
+#include <gui/music_screen/MusicPresenter.hpp>
+#include <gui/settings_screen/SettingsView.hpp>
+#include <gui/settings_screen/SettingsPresenter.hpp>
+#include <gui/energy_screen/EnergyView.hpp>
+#include <gui/energy_screen/EnergyPresenter.hpp>
+#include <gui/weather_screen/WeatherView.hpp>
+#include <gui/weather_screen/WeatherPresenter.hpp>
 
 
 /**
@@ -38,9 +57,17 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1View,
-            touchgfx::meta::TypeList< Screen2View,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< SplashView,
+            touchgfx::meta::TypeList< DefaultView,
+            touchgfx::meta::TypeList< MainView,
+            touchgfx::meta::TypeList< ClimateView,
+            touchgfx::meta::TypeList< LightsView,
+            touchgfx::meta::TypeList< SecurityView,
+            touchgfx::meta::TypeList< MusicView,
+            touchgfx::meta::TypeList< SettingsView,
+            touchgfx::meta::TypeList< EnergyView,
+            touchgfx::meta::TypeList< WeatherView,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -52,9 +79,17 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< Screen1Presenter,
-            touchgfx::meta::TypeList< Screen2Presenter,
-            touchgfx::meta::Nil >
+    typedef touchgfx::meta::TypeList< SplashPresenter,
+            touchgfx::meta::TypeList< DefaultPresenter,
+            touchgfx::meta::TypeList< MainPresenter,
+            touchgfx::meta::TypeList< ClimatePresenter,
+            touchgfx::meta::TypeList< LightsPresenter,
+            touchgfx::meta::TypeList< SecurityPresenter,
+            touchgfx::meta::TypeList< MusicPresenter,
+            touchgfx::meta::TypeList< SettingsPresenter,
+            touchgfx::meta::TypeList< EnergyPresenter,
+            touchgfx::meta::TypeList< WeatherPresenter,
+            touchgfx::meta::Nil > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -67,7 +102,10 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::Nil
+            touchgfx::meta::TypeList< CoverTransition<SOUTH>,
+            touchgfx::meta::TypeList< CoverTransition<EAST>,
+            touchgfx::meta::TypeList< SlideTransition<WEST>,
+            touchgfx::meta::Nil > > >
             > GeneratedTransitionTypes;
 
     /**
@@ -77,7 +115,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotoSplashScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

@@ -4,18 +4,662 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1">
-      <Text Id="title" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">DragonEye 5"</Translation>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_T9MF" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Swipe up</Translation>
       </Text>
-      <Text Id="subtitle" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">STM32U5G9  -  800 x 480  -  TouchGFX</Translation>
+      <Text Id="time_remaining_wc" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">-4:28</Translation>
+      </Text>
+      <Text Id="time_elapsed_wc" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">0:00</Translation>
+      </Text>
+      <Text Id="__SingleUse_72EN" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_JMQD" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="music_artist_large" Alignment="Left" TypographyId="Light_19">
+        <Translation Language="GB">Fleetwood Mac</Translation>
+      </Text>
+      <Text Id="music_track_large" Alignment="Left" TypographyId="Light_19">
+        <Translation Language="GB">The Chain</Translation>
+      </Text>
+      <Text Id="__SingleUse_T5IQ" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_A37C" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FQ0V" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CTZD" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Music</Translation>
+      </Text>
+      <Text Id="alarm_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Online</Translation>
+      </Text>
+      <Text Id="back_door_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_WXCT" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6US7" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Alarm system</Translation>
+      </Text>
+      <Text Id="__SingleUse_QDHN" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4K3I" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Garage</Translation>
+      </Text>
+      <Text Id="garage_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_4NY4" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_G75F" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Back door</Translation>
+      </Text>
+      <Text Id="front_door_status" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="__SingleUse_4XFU" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QVWS" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Front door</Translation>
+      </Text>
+      <Text Id="__SingleUse_D3PM" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Security</Translation>
+      </Text>
+      <Text Id="__SingleUse_2O3E" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="cooling" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Cooling to 21</Translation>
+      </Text>
+      <Text Id="__SingleUse_MV05" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Conservatory</Translation>
+      </Text>
+      <Text Id="__SingleUse_668E" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Hallway</Translation>
+      </Text>
+      <Text Id="__SingleUse_IQRM" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Kitchen</Translation>
+      </Text>
+      <Text Id="__SingleUse_2WDC" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Living room</Translation>
+      </Text>
+      <Text Id="security_status" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="music_artist" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Fleetwood Mac</Translation>
+      </Text>
+      <Text Id="music_track" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">The Chain</Translation>
+      </Text>
+      <Text Id="lights_" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="climate_temp" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="__SingleUse_STD9" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Lights</Translation>
+      </Text>
+      <Text Id="__SingleUse_GTO2" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UCER" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_RUJO" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Climate</Translation>
+      </Text>
+      <Text Id="__SingleUse_9HP6" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">Outside 26°</Translation>
+      </Text>
+      <Text Id="__SingleUse_1UQX" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="main_temp" Alignment="Left" TypographyId="Reg_99">
+        <Translation Language="GB">21</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Reg_99">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_08D4" Alignment="Center" TypographyId="Reg_99">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_AW3P" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9SBH" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7FTV" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CMKS" Alignment="Center" TypographyId="Reg_22">
+        <Translation Language="GB">Front door</Translation>
+      </Text>
+      <Text Id="__SingleUse_1NXF" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">On</Translation>
+      </Text>
+      <Text Id="__SingleUse_OQP1" Alignment="Center" TypographyId="Reg_50">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="climate_status" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Cooling to 21</Translation>
+      </Text>
+      <Text Id="__SingleUse_9T3V" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KRRR" Alignment="Center" TypographyId="Reg_50">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_CPPF" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SO5M" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">My Home</Translation>
+      </Text>
+      <Text Id="__SingleUse_A985" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">Inside 21° • Outside 26° </Translation>
+      </Text>
+      <Text Id="__SingleUse_I3NC" Alignment="Center" TypographyId="Light_50">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="__SingleUse_YWNP" Alignment="Center" TypographyId="Reg_28">
+        <Translation Language="GB">Tuesday, Aug 25</Translation>
+      </Text>
+      <Text Id="__SingleUse_4W7S" Alignment="Left" TypographyId="Light_90">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BPL1" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">v_1.3</Translation>
+      </Text>
+      <Text Id="w5_energy_value" Alignment="Left" TypographyId="Reg_50">
+        <Translation Language="GB">12.4</Translation>
+      </Text>
+      <Text Id="w5_energy_unit" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">kWh today</Translation>
+      </Text>
+      <Text Id="w5_energy_delta" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">8% less than yesterday</Translation>
+      </Text>
+      <Text Id="w5_weather_temp" Alignment="Left" TypographyId="Reg_50">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="w5_weather_hilo" Alignment="Right" TypographyId="Reg_15">
+        <Translation Language="GB">H 27°  L 16°</Translation>
+      </Text>
+      <Text Id="w5_weather_cond" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Sunny</Translation>
+      </Text>
+      <Text Id="w5_weather_more" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Humidity 45%   Wind 8 km/h</Translation>
+      </Text>
+      <Text Id="w5_air_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Indoor air</Translation>
+      </Text>
+      <Text Id="w5_hum_label" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Humidity</Translation>
+      </Text>
+      <Text Id="w5_hum_value" Alignment="Left" TypographyId="Reg_22">
+        <Translation Language="GB">45%</Translation>
+      </Text>
+      <Text Id="w5_aq_label" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Air quality</Translation>
+      </Text>
+      <Text Id="w5_aq_value" Alignment="Left" TypographyId="Reg_22">
+        <Translation Language="GB">Good</Translation>
+      </Text>
+      <Text Id="w5_sched_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Today's schedule</Translation>
+      </Text>
+      <Text Id="w5_room_name" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Living room</Translation>
+      </Text>
+      <Text Id="w5_room_level" Alignment="Left" TypographyId="Light_50">
+        <Translation Language="GB">80%</Translation>
+      </Text>
+      <Text Id="w5_room_level_lbl" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Brightness</Translation>
+      </Text>
+      <Text Id="w5_room_colour" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Colour</Translation>
+      </Text>
+      <Text Id="w5_room_warmth" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Warmth</Translation>
+      </Text>
+      <Text Id="w5_room_power" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">4 lights on  -  38 W</Translation>
+      </Text>
+      <Text Id="w5_sec_state" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">System armed</Translation>
+      </Text>
+      <Text Id="w5_sec_state2" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">All sensors online</Translation>
+      </Text>
+      <Text Id="w5_sec_log_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Recent activity</Translation>
+      </Text>
+      <Text Id="w5_queue_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Up next</Translation>
+      </Text>
+      <Text Id="w5_q1_track" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Money</Translation>
+      </Text>
+      <Text Id="w5_q1_artist" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Pink Floyd</Translation>
+      </Text>
+      <Text Id="w5_q2_track" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">May Ninth</Translation>
+      </Text>
+      <Text Id="w5_q2_artist" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Khruangbin</Translation>
+      </Text>
+      <Text Id="w5_q3_track" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">The Chain</Translation>
+      </Text>
+      <Text Id="w5_q3_artist" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Fleetwood Mac</Translation>
+      </Text>
+      <Text Id="w5_queue_foot" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Playing in 2 rooms</Translation>
+      </Text>
+      <Text Id="w5_fc_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Next 3 days</Translation>
+      </Text>
+      <Text Id="w5_home_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">At home</Translation>
+      </Text>
+      <Text Id="w5_home_lights_v" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="w5_home_lights_l" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Lights on</Translation>
+      </Text>
+      <Text Id="w5_home_temp_v" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">21°</Translation>
+      </Text>
+      <Text Id="w5_home_temp_l" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Inside</Translation>
+      </Text>
+      <Text Id="w5_home_lock_l" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Locked</Translation>
+      </Text>
+      <Text Id="w5_row0_time" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">06:30</Translation>
+      </Text>
+      <Text Id="w5_row0_label" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Wake up</Translation>
+      </Text>
+      <Text Id="w5_row0_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">21°</Translation>
+      </Text>
+      <Text Id="w5_row1_time" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">09:00</Translation>
+      </Text>
+      <Text Id="w5_row1_label" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Away</Translation>
+      </Text>
+      <Text Id="w5_row1_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">17°</Translation>
+      </Text>
+      <Text Id="w5_row2_time" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">17:30</Translation>
+      </Text>
+      <Text Id="w5_row2_label" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Home</Translation>
+      </Text>
+      <Text Id="w5_row2_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">21°</Translation>
+      </Text>
+      <Text Id="w5_row3_time" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">22:30</Translation>
+      </Text>
+      <Text Id="w5_row3_label" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Sleep</Translation>
+      </Text>
+      <Text Id="w5_row3_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">18°</Translation>
+      </Text>
+      <Text Id="w5_log0_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Back door unlocked</Translation>
+      </Text>
+      <Text Id="w5_log0_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 17:05</Translation>
+      </Text>
+      <Text Id="w5_log1_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Doorbell pressed</Translation>
+      </Text>
+      <Text Id="w5_log1_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 13:02</Translation>
+      </Text>
+      <Text Id="w5_log2_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Motion in hallway</Translation>
+      </Text>
+      <Text Id="w5_log2_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 12:30</Translation>
+      </Text>
+      <Text Id="w5_log3_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Garage closed</Translation>
+      </Text>
+      <Text Id="w5_log3_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 08:14</Translation>
+      </Text>
+      <Text Id="w5_log4_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Front door locked</Translation>
+      </Text>
+      <Text Id="w5_log4_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 08:12</Translation>
+      </Text>
+      <Text Id="w5_log5_event" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Alarm disarmed</Translation>
+      </Text>
+      <Text Id="w5_log5_time" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Today 07:58</Translation>
+      </Text>
+      <Text Id="w5_fc0_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Wed</Translation>
+      </Text>
+      <Text Id="w5_fc0_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">27°  16°</Translation>
+      </Text>
+      <Text Id="w5_fc1_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Thu</Translation>
+      </Text>
+      <Text Id="w5_fc1_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">23°  14°</Translation>
+      </Text>
+      <Text Id="w5_fc2_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Fri</Translation>
+      </Text>
+      <Text Id="w5_fc2_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">19°  12°</Translation>
+      </Text>
+      <Text Id="w5_set_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Settings</Translation>
+      </Text>
+      <Text Id="w5_set_display_hdr" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Display</Translation>
+      </Text>
+      <Text Id="w5_set_bright_lbl" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Brightness</Translation>
+      </Text>
+      <Text Id="w5_set_bright_val" Alignment="Right" TypographyId="Reg_22">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="w5_set_bright_val_init" Alignment="Right" TypographyId="Reg_22">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="w5_set_led_lbl" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Status LED</Translation>
+      </Text>
+      <Text Id="w5_set_led_sub" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">RGB light on the board</Translation>
+      </Text>
+      <Text Id="w5_set_conn_hdr" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Connectivity</Translation>
+      </Text>
+      <Text Id="w5_set_wifi_lbl" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Wi-Fi</Translation>
+      </Text>
+      <Text Id="w5_set_wifi_status" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="w5_set_wifi_status_init" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Connected - DragonEye</Translation>
+      </Text>
+      <Text Id="w5_set_bt_lbl" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Bluetooth</Translation>
+      </Text>
+      <Text Id="w5_set_bt_status" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="w5_set_bt_status_init" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">On - discoverable</Translation>
+      </Text>
+      <Text Id="w5_set_about_hdr" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">About this device</Translation>
+      </Text>
+      <Text Id="w5_set_about0_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Display</Translation>
+      </Text>
+      <Text Id="w5_set_about0_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">5" 800 x 480</Translation>
+      </Text>
+      <Text Id="w5_set_about1_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Processor</Translation>
+      </Text>
+      <Text Id="w5_set_about1_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">STM32U5G9</Translation>
+      </Text>
+      <Text Id="w5_set_about2_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Firmware</Translation>
+      </Text>
+      <Text Id="w5_set_about2_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">v1.3</Translation>
+      </Text>
+      <Text Id="w5_set_about3_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Graphics</Translation>
+      </Text>
+      <Text Id="w5_set_about3_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">TouchGFX 4.27</Translation>
+      </Text>
+      <Text Id="w5_set_about4_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">External flash</Translation>
+      </Text>
+      <Text Id="w5_set_about4_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">64 MB OSPI</Translation>
+      </Text>
+      <Text Id="w5_set_about5_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Project</Translation>
+      </Text>
+      <Text Id="w5_set_about5_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">DragonEyeU5_5R</Translation>
+      </Text>
+      <Text Id="w5_en_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Energy</Translation>
+      </Text>
+      <Text Id="w5_en_chart_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Consumption</Translation>
+      </Text>
+      <Text Id="w5_en_total_value" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="w5_en_total_value_init" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">87.4 kWh</Translation>
+      </Text>
+      <Text Id="w5_en_total_label" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="w5_en_total_label_init" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">This week  -  12.5 kWh per day</Translation>
+      </Text>
+      <Text Id="w5_en_stat0_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Used today</Translation>
+      </Text>
+      <Text Id="w5_en_stat0_v" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">12.4 kWh</Translation>
+      </Text>
+      <Text Id="w5_en_stat0_s" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">8% less than yesterday</Translation>
+      </Text>
+      <Text Id="w5_en_stat1_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Solar generated</Translation>
+      </Text>
+      <Text Id="w5_en_stat1_v" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">5.1 kWh</Translation>
+      </Text>
+      <Text Id="w5_en_stat1_s" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">41% of today's use</Translation>
+      </Text>
+      <Text Id="w5_en_stat2_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Cost today</Translation>
+      </Text>
+      <Text Id="w5_en_stat2_v" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">£3.72</Translation>
+      </Text>
+      <Text Id="w5_en_stat2_s" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Off-peak from 00:30</Translation>
+      </Text>
+      <Text Id="w5_en_split_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Where it goes today</Translation>
+      </Text>
+      <Text Id="w5_en_split_lbl0" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Heating  42%</Translation>
+      </Text>
+      <Text Id="w5_en_split_lbl1" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Kitchen  25%</Translation>
+      </Text>
+      <Text Id="w5_en_split_lbl2" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Lights  18%</Translation>
+      </Text>
+      <Text Id="w5_en_split_lbl3" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Other  15%</Translation>
+      </Text>
+      <Text Id="w5_wx_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Weather</Translation>
+      </Text>
+      <Text Id="w5_wx_now_temp" Alignment="Left" TypographyId="Light_90">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="w5_wx_now_cond" Alignment="Left" TypographyId="Reg_28">
+        <Translation Language="GB">Sunny</Translation>
+      </Text>
+      <Text Id="w5_wx_now_feels" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Feels like 27°   H 27°  L 16°</Translation>
+      </Text>
+      <Text Id="w5_wx_chip0_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Humidity</Translation>
+      </Text>
+      <Text Id="w5_wx_chip0_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">45%</Translation>
+      </Text>
+      <Text Id="w5_wx_chip1_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Wind</Translation>
+      </Text>
+      <Text Id="w5_wx_chip1_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">8 km/h</Translation>
+      </Text>
+      <Text Id="w5_wx_chip2_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">UV index</Translation>
+      </Text>
+      <Text Id="w5_wx_chip2_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">6 High</Translation>
+      </Text>
+      <Text Id="w5_wx_chip3_k" Alignment="Left" TypographyId="light_12">
+        <Translation Language="GB">Sunset</Translation>
+      </Text>
+      <Text Id="w5_wx_chip3_v" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">19:42</Translation>
+      </Text>
+      <Text Id="w5_wx_days_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">5-day forecast</Translation>
+      </Text>
+      <Text Id="w5_wx_d0_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Wed</Translation>
+      </Text>
+      <Text Id="w5_wx_d0_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">27°  16°</Translation>
+      </Text>
+      <Text Id="w5_wx_d1_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Thu</Translation>
+      </Text>
+      <Text Id="w5_wx_d1_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">23°  14°</Translation>
+      </Text>
+      <Text Id="w5_wx_d2_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Fri</Translation>
+      </Text>
+      <Text Id="w5_wx_d2_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">19°  12°</Translation>
+      </Text>
+      <Text Id="w5_wx_d3_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Sat</Translation>
+      </Text>
+      <Text Id="w5_wx_d3_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">20°  13°</Translation>
+      </Text>
+      <Text Id="w5_wx_d4_day" Alignment="Left" TypographyId="Reg_19">
+        <Translation Language="GB">Sun</Translation>
+      </Text>
+      <Text Id="w5_wx_d4_temp" Alignment="Right" TypographyId="Reg_19">
+        <Translation Language="GB">24°  15°</Translation>
+      </Text>
+      <Text Id="w5_wx_hours_title" Alignment="Left" TypographyId="Reg_15">
+        <Translation Language="GB">Today</Translation>
+      </Text>
+      <Text Id="w5_wx_h0_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">Now</Translation>
+      </Text>
+      <Text Id="w5_wx_h0_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="w5_wx_h1_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">14:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h1_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">27°</Translation>
+      </Text>
+      <Text Id="w5_wx_h2_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">15:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h2_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">27°</Translation>
+      </Text>
+      <Text Id="w5_wx_h3_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">16:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h3_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">26°</Translation>
+      </Text>
+      <Text Id="w5_wx_h4_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">17:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h4_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">24°</Translation>
+      </Text>
+      <Text Id="w5_wx_h5_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">18:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h5_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">22°</Translation>
+      </Text>
+      <Text Id="w5_wx_h6_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">19:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h6_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">20°</Translation>
+      </Text>
+      <Text Id="w5_wx_h7_time" Alignment="Center" TypographyId="Reg_15">
+        <Translation Language="GB">20:00</Translation>
+      </Text>
+      <Text Id="w5_wx_h7_temp" Alignment="Center" TypographyId="Reg_19">
+        <Translation Language="GB">18°</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" />
+    <Typography Id="Reg_99" Font="Inter-Regular.ttf" Size="99" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_50" Font="Inter-Regular.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_28" Font="Inter-Regular.ttf" Size="28" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_22" Font="Inter-Regular.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_19" Font="Inter-Regular.ttf" Size="19" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Reg_15" Font="Inter-Regular.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" WidgetWildcardCharacters="0123456789 :APM" />
+    <Typography Id="Light_90" Font="Inter-Light.ttf" Size="90" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" WidgetWildcardCharacters="0123456789 :APM" />
+    <Typography Id="Light_50" Font="Inter-Light.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="Light_19" Font="Inter-Light.ttf" Size="19" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
+    <Typography Id="light_12" Font="Inter-Light.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789°.,!?-: ()" />
   </Typographies>
 </TextDatabase>

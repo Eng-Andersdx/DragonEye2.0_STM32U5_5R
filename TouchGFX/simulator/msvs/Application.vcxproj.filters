@@ -172,29 +172,125 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>2E9DD3B0-E02C-2A5C-C485-15C0A47CED4A</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>CD4148D7-5B70-B532-6A34-96063258C257</UniqueIdentifier>
+    <Filter Include="Header Files\gui\settings_screen">
+      <UniqueIdentifier>BAD42B73-2661-CEC7-0D73-EB95D44280E1</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>907B293D-0282-66A9-2A9E-A8B422B45916</UniqueIdentifier>
+    <Filter Include="Source Files\gui\energy_screen">
+      <UniqueIdentifier>DD4FBEAC-5340-A7D5-F0F4-F75A446C6F57</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>21586D04-54EC-D32B-29F1-25BD6669442D</UniqueIdentifier>
+    <Filter Include="Header Files\gui\climate_screen">
+      <UniqueIdentifier>515DC6E5-F48C-99CB-D0E6-BA939FEB1368</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>8DBB5D9B-48A5-AB71-A8D1-27CB94E4A035</UniqueIdentifier>
+    <Filter Include="Source Files\gui\settings_screen">
+      <UniqueIdentifier>68303DF8-8EC8-200B-3563-581B803C221E</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen2_screen">
-      <UniqueIdentifier>B5D9E883-62EC-5EA1-88C7-82725926B1A1</UniqueIdentifier>
+    <Filter Include="Source Files\gui\splash_screen">
+      <UniqueIdentifier>16FC4791-0D73-9AA5-20D8-DD07A0809F0D</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\screen2_screen">
-      <UniqueIdentifier>F98905F6-1328-A7F4-CD21-D84CA8C6C946</UniqueIdentifier>
+    <Filter Include="Header Files\gui\splash_screen">
+      <UniqueIdentifier>C6AEE96C-5396-493B-A6FB-CC773D6D2C83</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen2_screen">
-      <UniqueIdentifier>4D13EC67-B474-32ED-7B98-84BF2587C8F1</UniqueIdentifier>
+    <Filter Include="Header Files\gui\energy_screen">
+      <UniqueIdentifier>4828AF5A-46F3-4B21-6889-04FD3F25DCA4</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen2_screen">
-      <UniqueIdentifier>34875E1C-9366-C414-BA17-266D5509C580</UniqueIdentifier>
+    <Filter Include="Source Files\gui\climate_screen">
+      <UniqueIdentifier>FFB8F5F3-F3B6-5C8D-1DF3-2D80D5F0349C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\weather_screen">
+      <UniqueIdentifier>45AF5758-83D2-FE9D-A457-F61B467F6979</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\music_screen">
+      <UniqueIdentifier>B1B79CA7-51F6-C99A-3831-150FF85DECD8</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\lights_screen">
+      <UniqueIdentifier>6F2DFEB5-327B-2073-D64D-59C6270B7275</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\default_screen">
+      <UniqueIdentifier>B6D8C972-EF2E-AE26-E5FE-79FF497E0348</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\music_screen">
+      <UniqueIdentifier>CBDA5737-EC4E-6CCD-1AD7-F1BDCB2BF83E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\default_screen">
+      <UniqueIdentifier>082820AD-F95C-A8B9-E45F-9295AF11CDDB</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\main_screen">
+      <UniqueIdentifier>6C991D6B-804E-F0BC-1579-FBB569F2C63D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\weather_screen">
+      <UniqueIdentifier>831E4789-B49E-27ED-6E41-08EFB60711C3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\main_screen">
+      <UniqueIdentifier>4D71110F-3B62-3B73-3BA6-6067C0AC00EE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\security_screen">
+      <UniqueIdentifier>006383C7-4100-2E8F-941B-B1B391F184F4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\security_screen">
+      <UniqueIdentifier>7F6CF270-AAF3-0118-1842-55E1C34821C5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\lights_screen">
+      <UniqueIdentifier>1EFAAEB4-8E9E-4188-0C20-81293423D1FC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\splash_screen">
+      <UniqueIdentifier>3CA45D9B-AC75-EA62-0FBE-F304E3929B90</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\weather_screen">
+      <UniqueIdentifier>EDEDDF94-0B75-A484-179B-6DAFC51AECA2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\splash_screen">
+      <UniqueIdentifier>43BA2DA6-2A0F-E25C-E259-56E83013BD27</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\weather_screen">
+      <UniqueIdentifier>2AEFF95D-2EA4-D041-00E5-603BB2E4C33E</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\climate_screen">
+      <UniqueIdentifier>5D00CE75-BCA3-8609-C68C-DEA4A3B569BF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\climate_screen">
+      <UniqueIdentifier>EE773E36-D77C-CAD0-37CD-4694A4A87782</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\default_screen">
+      <UniqueIdentifier>087B25D7-1111-D6F5-7F2B-9F164B0527A4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\default_screen">
+      <UniqueIdentifier>7986097E-268D-9EAE-91AA-E5F382106FAE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\energy_screen">
+      <UniqueIdentifier>0E2426B5-648E-CF50-BA20-762AB47C88BF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\energy_screen">
+      <UniqueIdentifier>21DD5331-C518-DFE7-7B9B-70F1D763EC9C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\lights_screen">
+      <UniqueIdentifier>AAB3D2A8-1329-904B-897F-0366901E0974</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\lights_screen">
+      <UniqueIdentifier>8C743B46-13A8-F8EC-3FEB-6528C2887327</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>3A2A8098-F7DF-14E2-79BA-67A86F112036</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\main_screen">
+      <UniqueIdentifier>0C1F6E1A-0BBE-EE0D-A1F2-12B9FDE748F0</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\music_screen">
+      <UniqueIdentifier>2A08A6FA-7843-4D68-D7AB-033C097131C9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\music_screen">
+      <UniqueIdentifier>769E7D47-DE72-4BC4-AED2-03A7A7DCBDE7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\security_screen">
+      <UniqueIdentifier>DA3A2897-BD2D-E254-5869-67FAB1E13E56</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\security_screen">
+      <UniqueIdentifier>DAAF5C72-194B-455D-C992-B51EF4B68C09</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\settings_screen">
+      <UniqueIdentifier>3532681B-D808-CDF9-F19D-38FDC8BE9C7C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\settings_screen">
+      <UniqueIdentifier>8B31A677-4AF0-DB34-AB1B-CA878D4EEB7F</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -228,23 +324,95 @@
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\climate_screen\ClimatePresenter.cpp">
+      <Filter>Source Files\gui\climate_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
-      <Filter>Source Files\gui\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\climate_screen\ClimateView.cpp">
+      <Filter>Source Files\gui\climate_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\climate_screen\ClimateViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\climate_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2Presenter.cpp">
-      <Filter>Source Files\gui\screen2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\default_screen\DefaultPresenter.cpp">
+      <Filter>Source Files\gui\default_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2View.cpp">
-      <Filter>Source Files\gui\screen2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\default_screen\DefaultView.cpp">
+      <Filter>Source Files\gui\default_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen2_screen\Screen2ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen2_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\default_screen\DefaultViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\default_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\energy_screen\EnergyPresenter.cpp">
+      <Filter>Source Files\gui\energy_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\energy_screen\EnergyView.cpp">
+      <Filter>Source Files\gui\energy_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\energy_screen\EnergyViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\energy_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lights_screen\LightsPresenter.cpp">
+      <Filter>Source Files\gui\lights_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\lights_screen\LightsView.cpp">
+      <Filter>Source Files\gui\lights_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\lights_screen\LightsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\lights_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainPresenter.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\main_screen\MainView.cpp">
+      <Filter>Source Files\gui\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\music_screen\MusicPresenter.cpp">
+      <Filter>Source Files\gui\music_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\music_screen\MusicView.cpp">
+      <Filter>Source Files\gui\music_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\music_screen\MusicViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\music_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\security_screen\SecurityPresenter.cpp">
+      <Filter>Source Files\gui\security_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\security_screen\SecurityView.cpp">
+      <Filter>Source Files\gui\security_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\security_screen\SecurityViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\security_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_screen\SettingsPresenter.cpp">
+      <Filter>Source Files\gui\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settings_screen\SettingsView.cpp">
+      <Filter>Source Files\gui\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\settings_screen\SettingsViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\settings_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\splash_screen\SplashPresenter.cpp">
+      <Filter>Source Files\gui\splash_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\splash_screen\SplashView.cpp">
+      <Filter>Source Files\gui\splash_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\splash_screen\SplashViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\splash_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\weather_screen\WeatherPresenter.cpp">
+      <Filter>Source Files\gui\weather_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\weather_screen\WeatherView.cpp">
+      <Filter>Source Files\gui\weather_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\weather_screen\WeatherViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\weather_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -688,23 +856,98 @@
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\climate_screen\ClimatePresenter.hpp">
+      <Filter>Header Files\gui\climate_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\climate_screen\ClimateView.hpp">
+      <Filter>Header Files\gui\climate_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\climate_screen\ClimateViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\climate_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2Presenter.hpp">
-      <Filter>Header Files\gui\screen2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\default_screen\DefaultPresenter.hpp">
+      <Filter>Header Files\gui\default_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2View.hpp">
-      <Filter>Header Files\gui\screen2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\default_screen\DefaultView.hpp">
+      <Filter>Header Files\gui\default_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen2_screen\Screen2ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen2_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\default_screen\DefaultViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\default_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\DeviceSettings.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\energy_screen\EnergyPresenter.hpp">
+      <Filter>Header Files\gui\energy_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\energy_screen\EnergyView.hpp">
+      <Filter>Header Files\gui\energy_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\energy_screen\EnergyViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\energy_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lights_screen\LightsPresenter.hpp">
+      <Filter>Header Files\gui\lights_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\lights_screen\LightsView.hpp">
+      <Filter>Header Files\gui\lights_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\lights_screen\LightsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\lights_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainPresenter.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\main_screen\MainView.hpp">
+      <Filter>Header Files\gui\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\music_screen\MusicPresenter.hpp">
+      <Filter>Header Files\gui\music_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\music_screen\MusicView.hpp">
+      <Filter>Header Files\gui\music_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\music_screen\MusicViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\music_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\security_screen\SecurityPresenter.hpp">
+      <Filter>Header Files\gui\security_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\security_screen\SecurityView.hpp">
+      <Filter>Header Files\gui\security_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\security_screen\SecurityViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\security_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_screen\SettingsPresenter.hpp">
+      <Filter>Header Files\gui\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settings_screen\SettingsView.hpp">
+      <Filter>Header Files\gui\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settings_screen\SettingsViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\settings_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\splash_screen\SplashPresenter.hpp">
+      <Filter>Header Files\gui\splash_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\splash_screen\SplashView.hpp">
+      <Filter>Header Files\gui\splash_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\splash_screen\SplashViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\splash_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\weather_screen\WeatherPresenter.hpp">
+      <Filter>Header Files\gui\weather_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\weather_screen\WeatherView.hpp">
+      <Filter>Header Files\gui\weather_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\weather_screen\WeatherViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\weather_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
