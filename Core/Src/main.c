@@ -181,6 +181,24 @@ void LCD_ST7262_Init(void)
 	 * Display-On (0x29) is needed for the ST7262 — the 0x09 = 0x10 above is
 	 * the chip's own equivalent commit. */
 }
+/* Touch controller interrupt (LCD_TOUCH_INT, PE8) -> STM32TouchController samples the panel */
+extern volatile uint8_t Touch_Event_Flag;
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin==LCD_TOUCH_INT_Pin) {
+		Touch_Event_Flag = 1;
+	}
+}
+
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin){
+	HAL_GPIO_EXTI_Callback(GPIO_Pin);
+}
+
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin){
+	HAL_GPIO_EXTI_Callback(GPIO_Pin);
+}
+
 /* USER CODE END 0 */
 
 /**

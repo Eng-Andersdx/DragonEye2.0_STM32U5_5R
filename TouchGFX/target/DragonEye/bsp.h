@@ -28,12 +28,16 @@
 #endif
 
  /* Includes ------------------------------------------------------------------*/
-//#define st1x33i
+#define st1x33i
 //#define DEU5_2_1R
 //#define DEU5_4S
 #define DEU5_5R
 #define PWM_LED
 //#define st1x33i_480x480
+#define st1x33i_800x480     /* 5" touch panel (Sitronix ST1633i, 800x480) */
+//#define TS_SWAP_XY        /* enable if X/Y are swapped    */
+//#define TS_MIRROR_X       /* enable if left/right mirrored */
+//#define TS_MIRROR_Y       /* enable if up/down mirrored    */
 
 typedef enum
 {
