@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "dragoneye_leds.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,7 +104,83 @@ static void MX_TIM3_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void DSI_IO_WriteCmd(uint32_t NbrParams, uint8_t *pParams) {
+    if (NbrParams == 0) {
+        HAL_DSI_ShortWrite(&hdsi, 0, DSI_DCS_SHORT_PKT_WRITE_P0, pParams[0], 0);
+    } else if (NbrParams == 1) {
+        HAL_DSI_ShortWrite(&hdsi, 0, DSI_DCS_SHORT_PKT_WRITE_P1, pParams[0], pParams[1]);
+    } else {
+        HAL_DSI_LongWrite(&hdsi, 0, DSI_DCS_LONG_PKT_WRITE, NbrParams, pParams[NbrParams], pParams);
+    }
+}
 
+/* ST7262 uses MIPI DSI Generic Write (Type 0x23, "Generic short write, 2 parameters")
+ * rather than DCS write — each write puts one data byte at a given register address.
+ * Helper wrapper for clarity. */
+static inline void DSI_GenWrite(uint8_t reg, uint8_t val) {
+    HAL_DSI_ShortWrite(&hdsi, 0, DSI_GEN_SHORT_PKT_WRITE_P2, reg, val);
+}
+void LCD_ST7262_Init(void)
+{
+	/* YTC500RLAY-16-100C initialization sequence (ST7262 driver IC).
+	 * Adapted from the panel-vendor reference script YTC500RLAY-16-100C.txt.
+	 *
+	 * Unlike ST7701S, the ST7262 uses MIPI DSI Generic Writes (not DCS).
+	 * Each line below sets one chip register to a single byte value.
+	 *
+	 * The chip configures its OWN internal RGB timing for the LCD glass —
+	 * the HACTIVE/VACTIVE/HFP/HBP/HSW/VFP/VBP/VSW writes below are panel-
+	 * side parameters and are independent of the LTDC/DSI host-side timing
+	 * (which is set in MX_LTDC_Init() and MX_DSIHOST_DSI_Init()).
+	 */
+
+	/* ---- Panel-side video timing (must match the LCD glass spec) ---- */
+	DSI_GenWrite(0x7A, 0xC1);   /* MIPI_CFG_PW         — MIPI config power-on */
+	DSI_GenWrite(0x20, 0x20);   /* HACTIVE_L           — HA = 0x320 = 800, low byte 0x20 */
+	DSI_GenWrite(0x21, 0xE0);   /* VACTIVE_L           — VA = 0x1E0 = 480, low byte 0xE0 */
+	DSI_GenWrite(0x22, 0x13);   /* VACTIVE_HACTIVE_H   — high nibble: V=0x1, H=0x3 */
+	DSI_GenWrite(0x23, 0x08);   /* HFP_L               — HFP = 8 */
+	DSI_GenWrite(0x24, 0x04);   /* HSW_L               — HSW = 4 */
+	DSI_GenWrite(0x25, 0x08);   /* HBP_L               — HBP = 8 */
+	DSI_GenWrite(0x26, 0x00);   /* HFP_HSW_HBP_H       — all high bits = 0 */
+	DSI_GenWrite(0x27, 0x08);   /* VFP                 — VFP = 8 */
+	DSI_GenWrite(0x28, 0x04);   /* VSW                 — VSW = 4 */
+	DSI_GenWrite(0x29, 0x08);   /* VBP                 — VBP = 8 */
+
+	/* ---- DSI receiver and sync configuration ---- */
+	DSI_GenWrite(0x34, 0x80);   /* SYNC EVENT DLY LOW */
+	DSI_GenWrite(0x36, 0x08);   /* HFP MIN */
+	DSI_GenWrite(0x86, 0x29);   /* DSI_CTRL */
+	DSI_GenWrite(0xB5, 0xA0);   /* MIPI_PD_CK_LANE     — clock-lane power-down behaviour */
+	DSI_GenWrite(0x5C, 0xFF);   /* PLL_CTRL_C          — chip-internal PLL */
+
+	/* ---- Optional: MIPI P/N (polarity) swap ----
+	 * Uncomment if D0/D1 +/- routing on the 5" panel's FPC is reversed relative
+	 * to the MCU pads (analogous to ST7701S DSWAP/PSWAP on the 4" panel).
+	 * The vendor reference script has this commented out by default.
+	 * Symptoms if needed but not enabled: image misaligned + colour rotation.
+	 */
+	//DSI_GenWrite(0x87, 0x1F); /* MIPI P/N SWAP */
+
+	DSI_GenWrite(0x2A, 0x01);   /* BIST POL */
+	DSI_GenWrite(0x56, 0x92);   /* PLL_CTRL_6 */
+	DSI_GenWrite(0x6B, 0x72);   /* PLL_REF_DIV */
+	DSI_GenWrite(0x69, 0x25);   /* PLL_INT_0 */
+	DSI_GenWrite(0x10, 0x40);   /* SYS_CTRL_0 */
+	DSI_GenWrite(0x11, 0x88);   /* SYS_CTRL_1 */
+	DSI_GenWrite(0xB6, 0x20);   /* MIPI_FORCE_0 */
+	DSI_GenWrite(0x51, 0x20);   /* PLL_CTRL_1 */
+
+	DSI_GenWrite(0x09, 0x10);   /* CONFIG_FINISH       — commit configuration */
+
+	HAL_Delay(100);             /* Datasheet: ≥100 ms after CONFIG_FINISH before video starts */
+
+	/* MIPI_VIDEO() in the panel-vendor script is the panel's "switch to video mode"
+	 * call. On STM32, the equivalent is HAL_DSI_Start() — already done in
+	 * MX_DSIHOST_DSI_Init() before LTDC starts pushing pixel data. No DCS
+	 * Display-On (0x29) is needed for the ST7262 — the 0x09 = 0x10 above is
+	 * the chip's own equivalent commit. */
+}
 /* USER CODE END 0 */
 
 /**
@@ -161,6 +237,91 @@ int main(void)
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
+
+  // Enable PWN for BackLight
+  BSP_BL_PWM_Init(&htim2, TIM_CHANNEL_1);
+  BSP_BL_SetIntensity(100); //Set Intensity to 100, Maximum Brightness
+
+  //Enable PWM for RGB Ring Light
+  BSP_LED_PWM_Init(&htim3,TIM_CHANNEL_3, TIM_CHANNEL_2, TIM_CHANNEL_1);
+  BSP_LED_SetColor(RGB_WHITE);
+
+//  /* Reuse the existing TouchGFX framebuffer for the bring-up test rather than
+//   * allocating a separate buffer (which would overflow internal SRAM — the
+//   * TouchGFX frameBuf already occupies 2.3 MB for double-buffer RGB888). The
+//   * TouchGFX buffer is declared at file scope in TouchGFXGeneratedHAL.cpp with
+//   * C linkage so we can extern it from here. Layout is RGB888 (3 bytes/pixel)
+//   * which matches LTDC PixelFormat. */
+//  extern uint32_t frameBuf[];                              /* declared in TouchGFXGeneratedHAL.cpp */
+//  volatile uint8_t *test_fb = (volatile uint8_t *)frameBuf;
+//  const uint32_t test_fb_size = 800u * 480u * 3u;          /* 1,152,000 bytes */
+//
+//  //DO NOT init TouchGFX for this test:
+//      //MX_TouchGFX_Init();
+//      //MX_TouchGFX_PreOSInit();
+//
+//
+//    //Build single vertical white line for column-position testing.
+//      //LTDC RGB888 memory layout per pixel is byte0=B, byte1=G, byte2=R.
+//  memset((void *)test_fb, 0x00, test_fb_size);
+//   for (int y = 0; y < 480; y++) {
+//       int x = 600;            // change this between runs: 0..799 (try 100, 200, 400, 600, 799)
+//       uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//       test_fb[i + 0] = 0x00;  /* B */
+//       test_fb[i + 1] = 0x00;  /* G */
+//       test_fb[i + 2] = 0xFF;  /* R */
+//   }
+//   for (int y = 0; y < 480; y++) {
+//       for (int x = 0; x < 20; x++) {
+//           uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//           test_fb[i + 0] = (x <  20)               ? 0xFF : 0x00; /* B */
+//           test_fb[i + 1] = (x <  20)               ? 0xFF : 0x00; /* G */
+//           test_fb[i + 2] = (x <  20)               ? 0xFF : 0x00; /* R */
+//       }
+//       for (int x = 21; x < 220; x++) {
+//           uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//           test_fb[i + 0] = (x >= 200 && x < 220)   ? 0xFF : 0x00; /* B */
+//           test_fb[i + 1] = (x >= 200 && x < 220)   ? 0xFF : 0x00; /* G */
+//           test_fb[i + 2] = (x >= 200 && x < 220)   ? 0xFF : 0x00; /* R */
+//       }
+//       for (int x = 221; x < 440; x++) {
+//           uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//           test_fb[i + 0] = (x >= 400 && x < 440)   ? 0xFF : 0x00; /* B */
+//           test_fb[i + 1] = (x >= 400 && x < 440)   ? 0xFF : 0x00; /* G */
+//           test_fb[i + 2] = (x >= 400 && x < 440)   ? 0xFF : 0x00; /* R */
+//       }
+//       for (int x = 441; x < 800; x++) {
+//           uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//           test_fb[i + 0] = (x >= 600 && x < 800)   ? 0xFF : 0x00; /* B */
+//           test_fb[i + 1] = (x >= 600 && x < 800)   ? 0xFF : 0x00; /* G */
+//           test_fb[i + 2] = (x >= 600 && x < 800)   ? 0xFF : 0x00; /* R */
+//       }
+//   }
+//   /* Build pattern: three vertical bands.
+//      LTDC ARGB8888 memory layout per pixel is byte0=B, byte1=G, byte2=R, byte3=A. */
+//   for (int y = 0; y < 480; y++) {
+//       for (int x = 0; x < 800; x++) {
+//    	   uint32_t i = (uint32_t)(y * 800 + x) * 3u;   /* 5" panel row stride = 800 px */
+//           test_fb[i + 0] = (x <  100)              ? 0xFF : 0x00; /* B */
+//           test_fb[i + 1] = (x >= 260 && x < 460)   ? 0xFF : 0x00; /* G */
+//           test_fb[i + 2] = (x >= 600)              ? 0xFF : 0x00; /* R */
+//       }
+//   }
+//
+//    // Make sure CPU writes are visible to LTDC.
+//    __DSB();   /* drain the store buffer first */
+//    HAL_DCACHE_CleanByAddr(&hdcache1, (uint32_t*)test_fb, test_fb_size);
+//    HAL_DCACHE_CleanByAddr(&hdcache2, (uint32_t*)test_fb, test_fb_size);
+//    __DSB();
+//    __ISB();
+//
+//     //Point LTDC layer 0 at the test buffer and force an immediate reload.
+//    LTDC_Layer1->CFBAR = (uint32_t)test_fb;
+//    LTDC->SRCR = LTDC_SRCR_IMR;
+//
+//     //Halt here. Don't let the scheduler start.
+//    while (1) { __NOP(); }
+
 
   /* USER CODE END 2 */
 
@@ -419,6 +580,21 @@ static void MX_DSIHOST_DSI_Init(void)
 
   /* USER CODE BEGIN DSIHOST_Init 0 */
 
+  /* Power-rail settle. On cold boot VCI/IOVCC may still be ramping when we
+	 get here. Helps prevent RESX being asserted on a partially-powered chip. */
+  HAL_Delay(10);
+
+  /* HW reset pulse. RESX low width must be ≥10 µs per datasheet; 10 ms is
+	 plenty of margin and signal-integrity-safe even on long FPCs. */
+  HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_RESET);
+  HAL_Delay(20);
+  HAL_GPIO_WritePin(LCD_RESET_GPIO_Port, LCD_RESET_Pin, GPIO_PIN_SET);
+
+  /* Datasheet: ≥120 ms between RESX rising edge and the first DCS command.
+	 We allow 200 ms — the rest of init (DSI config + LTDC + ST7701 first DCS)
+	 takes more than that anyway, so this is effectively the strap-latch margin. */
+  HAL_Delay(120);
+
   /* USER CODE END DSIHOST_Init 0 */
 
   DSI_PLLInitTypeDef PLLInit = {0};
@@ -511,6 +687,35 @@ static void MX_DSIHOST_DSI_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN DSIHOST_Init 2 */
+
+  if (HAL_DSI_Start(&hdsi) != HAL_OK)
+  {
+	  Error_Handler();
+  }
+
+  /* Switch DSI byte clock source from PLL3P to the internal DSI PHY PLL.
+      *
+      * Required: PLL3P-sourced byte clock causes occasional cold-boot flickering
+      * because the DSI byte clock domain and HS lane bit-rate domain become
+      * two physically separate clocks, with random phase on every boot. CDC
+      * synchronizer races inside the DSI host then produce intermittent
+      * bit slips.
+      *
+      * Switching to DSIPHY makes both domains share a single VCO, eliminating
+      * the race. CubeMX cannot generate this configuration directly because
+      * the DSI PHY PLL doesn't exist as a clock source until HAL_DSI_Init()
+      * has run — hence the manual override here after DSI is up.
+  */
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_DSI;
+  PeriphClkInit.DsiClockSelection    = RCC_DSICLKSOURCE_DSIPHY;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK) {
+         Error_Handler();
+     }
+  /* DSI PHY HS-mode lane lock + clock stabilization. Empirically ~250 ms is
+     needed for reliable first-DCS reception on this board (cold-boot worst
+     case). Below this, marginal lots show occasional flickering reboots. */
+  HAL_Delay(5);
 
   /* USER CODE END DSIHOST_Init 2 */
 
@@ -776,6 +981,9 @@ static void MX_LTDC_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN LTDC_Init 2 */
+
+  //LCD Intializion
+  LCD_ST7262_Init();
 
   /* USER CODE END LTDC_Init 2 */
 

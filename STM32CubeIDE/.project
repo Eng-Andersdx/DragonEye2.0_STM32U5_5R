@@ -250,6 +250,21 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/TouchGFXHAL.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/dragoneye_leds.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/dragoneye_leds.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/dragoneye_leds.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/dragoneye_leds.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/bsp.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/bsp.h</locationURI>
+		</link>
+		<link>
 			<name>Application/User/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp</locationURI>
