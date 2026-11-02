@@ -47,6 +47,7 @@ MEMORY
 {
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 3008K
   FLASH    (rx)    : ORIGIN = 0x08000000,   LENGTH = 4096K
+  EXT_FLASH (r)    : ORIGIN = 0x90000000,   LENGTH = 64M
 }
 
 /* Sections */
@@ -166,6 +167,30 @@ SECTIONS
     __bss_end__ = _ebss;
   } >RAM
 
+  /* TouchGFX / NemaGFX buffers: uninitialised RAM, no copy stored in FLASH.
+     Placed before ._user_heap_stack so the heap/stack check still covers them. */
+  FramebufferSection (NOLOAD) :
+  {
+    *(TouchGFX_Framebuffer TouchGFX_Framebuffer.*)
+    . = ALIGN(0x4);
+  } >RAM
+
+  NemagfxSection (NOLOAD) :
+  {
+    *(Nemagfx_Memory_Pool_Buffer Nemagfx_Memory_Pool_Buffer.*)
+    *(Nemagfx_Stencil_Buffer Nemagfx_Stencil_Buffer.*)
+    . = ALIGN(0x4);
+  } >RAM
+
+  MJPEGBufferSection (NOLOAD) :
+  {
+    . = ALIGN(32);
+    *(TouchGFX_MCU_Data_OutBuffer0 TouchGFX_MCU_Data_OutBuffer0.*)
+    . = ALIGN(32);
+    *(TouchGFX_MCU_Data_OutBuffer1 TouchGFX_MCU_Data_OutBuffer1.*)
+    . = ALIGN(0x4);
+  } >RAM
+
   /* User_heap_stack section, used to check that there is enough "RAM" Ram  type memory left */
   ._user_heap_stack :
   {
@@ -186,4 +211,12 @@ SECTIONS
   }
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
+
+  /* TouchGFX assets placed in external OCTOSPI flash (MX25UM51245G) */
+  ExtFlashSection :
+  {
+    *(ExtFlashSection ExtFlashSection.*)
+    *(.gnu.linkonce.r.*)
+    . = ALIGN(0x4);
+  } >EXT_FLASH
 }

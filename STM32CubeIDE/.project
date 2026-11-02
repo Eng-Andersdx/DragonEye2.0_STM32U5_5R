@@ -295,6 +295,41 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/generated/nema_hal.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/mx25um51245g.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/mx25um51245g.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/mx25um51245g.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/mx25um51245g.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/mx25um51245g_conf.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/mx25um51245g_conf.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_conf.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_conf.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_errno.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_errno.h</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_ospi.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_ospi.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_ospi.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/target/DragonEye/Components/stm32u5x9j_discovery_ospi.h</locationURI>
+		</link>
+		<link>
 			<name>Middlewares/RTOS2/CMSIS/RTOS2/Core/TZ_Non_Supported/cmsis_os2.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c</locationURI>
