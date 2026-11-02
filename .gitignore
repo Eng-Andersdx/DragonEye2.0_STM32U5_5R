@@ -1,0 +1,66 @@
+# =============================================================================
+# DragonEye 2.0 - STM32U5 (5") - STM32CubeIDE + TouchGFX
+# =============================================================================
+
+# ---- STM32CubeIDE build output ---------------------------------------------
+Debug/
+Release/
+*.o
+*.d
+*.su
+*.cyclo
+*.elf
+*.map
+*.list
+*.hex
+*.srec
+*.axf
+*.lst
+*.bin
+# TouchGFX video data is linked from these, keep them
+!TouchGFX/generated/videos/bin/*.bin
+!TouchGFX/generated/videos/obj/*.o
+
+# ---- TouchGFX build output (target Makefile + simulator) --------------------
+TouchGFX/build/
+TouchGFX/simulator/msvs/*.user
+TouchGFX/simulator/msvs/.vs/
+TouchGFX/simulator/msvs/Debug/
+TouchGFX/simulator/msvs/Release/
+TouchGFX/simulator/msvs/x64/
+*.exe
+*.pdb
+*.ilk
+*.obj
+
+# ---- Backups (STM32CubeMX / TouchGFX Designer / editors) --------------------
+*.bkp
+*.bak
+*.orig
+*~
+backup_*.ioc
+*_backup.touchgfx
+*.touchgfx.bak
+
+# ---- Logs and debug sessions -----------------------------------------------
+*.log
+st-link_gdbserver_log.txt
+
+# ---- Eclipse / STM32CubeIDE workspace data ----------------------------------
+.metadata/
+RemoteSystemsTempFiles/
+*.launch.bak
+
+# ---- Other IDEs and editors ------------------------------------------------
+.idea/
+.vscode/
+*.swp
+
+# ---- Python bytecode (helper scripts) --------------------------------------
+__pycache__/
+*.py[cod]
+
+# ---- Operating system files ------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
